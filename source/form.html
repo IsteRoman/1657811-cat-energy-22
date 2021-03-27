@@ -24,98 +24,95 @@
       </nav>
     </header>
     <main>
-      <div class="wrapper">
-        <h1 class="program-select">Подбор программы</h1>
-        <p class="cat-info__instructions instructions">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+      <div class="wrapper program-select">
+        <h1 class="program-select__title-position program-select__title">Подбор программы</h1>
+        <p class="program-select__text-position program-select__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
       </div>
-        <form class="cat__form" action="https://echo.htmlacademy.ru/" method="GET">
-          <div class="wrapper introduce-cat">
-            <fieldset class="introduce-cat__position cat-main-info">
-              <ul class="cat-main-info__list">
-                <li class="cat-main-info__item">
-                  <label class="form__label" for="cat-name">Имя:*</label>
-                  <input class="form__input" type="text" name="cat-name" id="cat-name" placeholder="Барсик" required>
-                </li>
-                <li class="cat-main-info__item">
-                  <label class="form__label" for="cat-weight">Вес (кг):*</label>
-                  <input class="form__input" type="number" name="cat-weight" id="cat-weight" placeholder="7" required>
-                </li>
-                <li class="cat-main-info__item">
-                  <label class="form__label" for="cat-age">Возраст (лет):</label>
-                  <input class="form__input" type="number" name="cat-age" id="cat-age" placeholder="7">
-                </li>
-              </ul>
-            </fieldset>
-            <fieldset class="introduce-cat__position cat-program-set">
-              <ul class="cat-program-set__list">
-                <li class="cat-program-set__item">
-                  <label class="form__label" for="radio-slim">Похудение</label>
-                  <input class="form__radio" type="radio" name="program-set" value="Slim" id="radio-slim" checked>
-                </li>
-                <li class="cat-main-info__item">
-                  <label class="form__label" for="radio-pro">Набор массы</label>
-                  <input class="form__radio" type="radio" name="program-set" value="Pro" id="radio-pro">
-                </li>
-                <li class="cat-main-info__item">
-                  <label class="form__label" for="radio-help">Не знаю (нужен ваш совет)</label>
-                  <input class="form__radio" type="radio" name="program-set" value="Help" id="radio-help">
-                </li>
-              </ul>
-            </fieldset>
+      <form class="form" action="https://echo.htmlacademy.ru/" method="GET">
+        <div class="wrapper introduce-cat">
+          <fieldset class="introduce-cat__position cat-main-info">
+            <ul class="cat-main-info__list">
+              <li class="cat-main-info__item">
+                <label class="form__label" for="cat-name">Имя:<sup>*</sup></label>
+                <input class="form__input" type="text" name="cat-name" id="cat-name" placeholder="Барсик" required>
+              </li>
+              <li class="cat-main-info__item">
+                <label class="form__label" for="cat-weight">Вес (кг):<sup>*</sup></label>
+                <input class="form__input" type="number" name="cat-weight" id="cat-weight" placeholder="7" required>
+              </li>
+              <li class="cat-main-info__item">
+                <label class="form__label" for="cat-age">Возраст (лет):</label>
+                <input class="form__input" type="number" name="cat-age" id="cat-age" placeholder="7">
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="introduce-cat__position cat-program-set">
+            <ul class="cat-program-set__list">
+              <li class="cat-program-set__item">
+                <label class="form__label" for="radio-slim">Похудение</label>
+                <input class="form__radio" type="radio" name="program-set" value="Slim" id="radio-slim" checked>
+              </li>
+              <li class="cat-main-info__item">
+                <label class="form__label" for="radio-pro">Набор массы</label>
+                <input class="form__radio" type="radio" name="program-set" value="Pro" id="radio-pro">
+              </li>
+              <li class="cat-main-info__item">
+                <label class="form__label" for="radio-help">Не знаю (нужен ваш совет)</label>
+                <input class="form__radio" type="radio" name="program-set" value="Help" id="radio-help">
+              </li>
+            </ul>
+          </fieldset>
+        </div>
+        <fieldset class="user-info">
+          <legend class="legend">Контактные данные (владельца кота)</legend>
+          <div class="wrapper">
+            <ul class="user-contacts">
+              <li class="user-contacts__item">
+                <label class="form__label" for="user_email">E-mail:<sup>*</sup></label>
+                <input class="form__input" type="email" name="user-email" id="user_email" required>
+              </li>
+              <li class="user-contacts__item">
+                <label class="form__label" for="user_phone">Телефон:<sup>*</sup></label>
+                <input class="form__input" type="tel" name="user_phone" id="user_phone" required>
+              </li>
+            </ul>
           </div>
-          <fieldset class="not-cat-information">
-            <div class="wrapper">
-              <legend class="legend">Контактные данные (владельца кота)</legend>
-              <ul class="user-contacts">
-                <li class="user-contacts__item">
-                  <label class="form__label" for="user_email">E-mail:*</label>
-                  <input class="form__input" type="email" name="user-email" id="user_email" required>
-                </li>
-                <li class="user-contacts__item">
-                  <label class="form__label" for="user_phone">Телефон:*</label>
-                  <input class="form__input" type="tel" name="user_phone" id="user_phone" required>
-                </li>
-              </ul>
-            </div>
-          </fieldset>
-          <fieldset class="not-cat-information">
-            <div class="wrapper">
-              <label class="visually-hidden" for="user-comment">Коментарий</label>
-              <textarea class="form__textarea" name="user_comment" id="user-comment" rows="5" placeholder="Расскажите обо всех повадках кота"></textarea>
-            </div>
-          </fieldset>
-          <fieldset class="not-cat-information">
-            <div class="wrapper">
-              <legend class="legend">Дополнительно</legend>
-              <ul class="additionally">
-                <li class="additionally__item">
-                  <input class="form__checkbox" type="checkbox" name="sweetener" id="sweetener-option" checked>
-                  <label class="form__label" for="sweetener-option">Сахарозаменитель</label>
-                </li>
-                <li class="additionally__item">
-                  <input class="form__checkbox" type="checkbox" name="water" id="water-option">
-                  <label class="form__label" for="water-option">Питьевая вода</label>
-                </li>
-                <li class="additionally__item">
-                  <input class="form__checkbox" type="checkbox" name="milk" id="milk-option">
-                  <label class="form__label" for="milk-option">Молоко</label>
-                </li>
-                <li class="additionally__item">
-                  <input class="form__checkbox" type="checkbox" name="vitamins" id="vitamins-option">
-                  <label class="form__label" for="vitamins-option">Витамины</label>
-                </li>
-              </ul>
-            </div>
-          </fieldset>
-          <div class="wrapper form__submit">
-            <button class="button form__submit-button" type="submit">Отправить заявку</button>
-            <b class="form__requaired-info"><sup>* </sup>- обязательное поле</b>
+        </fieldset>
+        <fieldset class="user-info">
+          <legend class="legend">Коментарий</legend>
+          <div class="wrapper">
+            <label class="visually-hidden" for="user-comment">Коментарий</label>
+            <textarea class="form__textarea" name="user_comment" id="user-comment" rows="5" placeholder="Расскажите обо всех повадках кота"></textarea>
           </div>
-
-        </form>
-
-
-
+        </fieldset>
+        <fieldset class="user-info">
+          <legend class="legend">Дополнительно</legend>
+          <div class="wrapper">
+            <ul class="additionally">
+              <li class="additionally__item">
+                <input class="form__checkbox" type="checkbox" name="sweetener" id="sweetener-option" checked>
+                <label class="form__label" for="sweetener-option">Сахарозаменитель</label>
+              </li>
+              <li class="additionally__item">
+                <input class="form__checkbox" type="checkbox" name="water" id="water-option">
+                <label class="form__label" for="water-option">Питьевая вода</label>
+              </li>
+              <li class="additionally__item">
+                <input class="form__checkbox" type="checkbox" name="milk" id="milk-option">
+                <label class="form__label" for="milk-option">Молоко</label>
+              </li>
+              <li class="additionally__item">
+                <input class="form__checkbox" type="checkbox" name="vitamins" id="vitamins-option">
+                <label class="form__label" for="vitamins-option">Витамины</label>
+              </li>
+            </ul>
+          </div>
+        </fieldset>
+        <div class="wrapper form__submit">
+          <button class="button form__submit-button" type="submit">Отправить заявку</button>
+          <span class="form__requaired-info"><sup>* </sup>- Обязательное поле</span>
+        </div>
+      </form>
       <section class="contacts-block">
         <h2 class="visually-hidden">Наши контакты</h2>
         <div class="wrapper contacts">
