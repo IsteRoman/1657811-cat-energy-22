@@ -1,0 +1,30 @@
+.cat-program-set {
+  position: relative;
+  .zero-intervals;
+  margin: 28px 0;
+  border: none;
+}
+
+.cat-program-set::before,
+.cat-program-set::after {
+  content: "";
+  position: absolute;
+  top: -28px;
+  left: -20px;
+  width: 320px;
+  height: 1px;
+  background-color: @special-light-gray-2;
+}
+
+.cat-program-set::after {
+  top: 126px;
+}
+
+.cat-program-set__list {
+  .zero-intervals;
+  list-style: none;
+}
+
+.cat-program-set__item:not(:last-of-type) {
+  margin-bottom: 25px;
+}
