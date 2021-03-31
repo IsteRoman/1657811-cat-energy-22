@@ -1,9 +1,61 @@
 .header {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
 
 .header__logo {
-  text-align: center;
+  margin: 11px 0 17px 0;
+}
+
+.header__menu-button--open,
+.header__menu-button--close  {
+  position: absolute;
+  top: -12px;
+  left: 283px;
+  width: 24px;
+  height: 16px;
+  margin: 25px 20px 25px 0;
+  background-color: transparent;
+  border: none;
+  border-top: 1px solid @basic-black;
+  border-bottom: 1px solid @basic-black;
+  cursor: pointer;
+}
+
+.header__menu-button--open::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 0;
+  width: 24px;
+  height: 1px;
+  background-color: @basic-black;
+}
+
+.header__menu-button--close {
+  width: 18px;
+  height: 18px;
+  border: none;
+}
+
+.header__menu-button--close::before,
+.header__menu-button--close::after {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: 10px;
+  display: block;
+  width: 1px;
+  height: 24px;
+  background-color: @basic-black;
+}
+
+.header__menu-button--close::before {
+  transform: rotate(45deg);
+}
+
+.header__menu-button--close::after {
+  transform: rotate(-45deg);
 }
