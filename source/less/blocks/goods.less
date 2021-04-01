@@ -8,16 +8,51 @@
 
 .goods__item {
   position: relative;
+  width: 100%;
   margin-top: 19px;
   margin-bottom: 11px;
 }
 
-.goods__item::before {
+.goods__item::after {
   content: "";
   position: absolute;
-  top: -19px;
+  top: 215px;
   left: 0;
   width: 100%;
   height: 1px;
   background-color: @special-grey;
+}
+
+.goods__add {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gooda__add-plus {
+  margin: 25px 0 23px 0;
+}
+
+.goods__add-title {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+  line-height: 1.25;
+  text-transform: uppercase;
+  color: @special-grey-4;
+}
+
+.goods__add-info {
+  margin: 0;
+  margin-bottom: 21px;
+  font-size: 12px;
+  line-height: 1.33;
+  color: @special-grey-3;
+  .arial;
+}
+
+.goods__button {
+  align-self: stretch;
+  margin-bottom: 25px;
+  color: @special-grey-3;
+  background-color: @basic-gray;
 }

@@ -1,25 +1,48 @@
 .good {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-areas:
+    "img title"
+    "img info"
+    "button button";
 }
 
 .good___img {
-  flex-grow: 1;
+  margin: auto;
+  grid-area: img;
 }
 
 .good__title {
+  grid-area: title;
+  max-width: 76px;
+  margin: 19px 0 18px 0;
   font-size: 16px;
   line-height: 1.25;
+  text-transform: uppercase;
   color: @special-grey-4;
 }
 
-.good__info-element {
+.good__info {
+  grid-area: info;
+  width: 100%;
+  margin-bottom: 22px;
+}
+
+.good__info-element-name,
+.good__info-element-price {
   font-size: 12px;
   line-height: 1.33;
   color: @special-grey-3;
+  .arial;
+}
+
+.good__info-element-name {
+  text-align: start;
+}
+
+.good__info-element-price {
+  text-align: end;
 }
 
 .good__button {
-  align-self: stretch;
+  grid-area: button;
 }
