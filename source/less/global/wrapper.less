@@ -3,4 +3,14 @@
   max-width: @mobile-width;
   margin: 0 auto;
   padding: 0 20px;
+
+  @media (min-width: @tablex-width) {
+    max-width: @tablex-width;
+    padding: 0 30px;
+  }
+
+  @media (min-width: @decktop-width) {
+    max-width: @decktop-width;
+    padding: 0 110px;
+  }
 }

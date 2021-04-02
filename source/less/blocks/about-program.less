@@ -1,8 +1,23 @@
 .about-program {
   display: grid;
   grid-template-rows: content, content;
-  margin-bottom: 22px;
-  background-color: purple;
+  margin-bottom: 18px;
+
+  @media (min-width: @tablex-width) {
+    margin-bottom: 10px;
+  }
+
+  @media (min-width: @decktop-width) {
+    margin-bottom: 11px;
+  }
+}
+
+.about-program__title {
+  margin-bottom: 38px;
+
+  @media (min-width: @tablex-width) {
+    margin-bottom: 32px;
+  }
 }
 
 .about-program__list {
@@ -11,10 +26,27 @@
   justify-content: flex-start;
   .zero-intervals;
   list-style: none;
+
+  @media (min-width: @tablex-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 }
 
 .about-program__item {
-  margin: 20px 0;
+  margin: 0 0 24px 0;
   padding-left: 80px;
   .arial;
+
+  @media (min-width: @tablex-width) {
+    max-width: 250px;
+    margin: 0 0 37px 0;
+    padding-top: 111px;
+    padding-left: 0;
+  }
+
+  @media (min-width: @decktop-width) {
+    margin: 0;
+  }
 }

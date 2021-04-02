@@ -1,25 +1,74 @@
-.intro {
-  margin-bottom: 22px;
-}
-
 .intro__block {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  background-color: blue;
+  min-height: 563px;
+  margin-bottom: 22px;
+  background: @background-green-mobile,
+    url("../BG-TEST.png") top no-repeat;
+
+  @media (min-width: @tablex-width) {
+    margin-bottom: 0;
+    background: none;
+  }
+
+  @media (min-width: @decktop-width) {
+    margin-bottom: 82px;
+    background: @background-green-desctop,
+      url("../BG-TEST.png") center right no-repeat;
+    background-size: contain;
+  }
 }
 
 .intro__title {
+  width: auto;
   margin: 27px 0 25px 0;
   align-self: center;
   text-align: center;
   color: @basic-white;
+
+  @media (min-width: @tablex-width) {
+    width: 414px;
+    margin: 62px 0 41px 0;
+    align-self: flex-start;
+    text-align: start;
+    color: @basic-black;
+  }
+
+  @media (min-width: @decktop-width) {
+    margin: 114px 0 40px 0;
+  }
 }
 
 .intro__text {
+  width: auto;
   margin-bottom: 302px;
   line-height: 1;
   text-align: center;
   text-transform: uppercase;
   color: @basic-white;
+
+  @media (min-width: @tablex-width) {
+    width: 283px;
+    margin-bottom: 49px;
+    align-self: flex-start;
+    font-size: 20px;
+    text-align: start;
+    color: @basic-black;
+  }
+
+  @media (min-width: @decktop-width) {
+    margin-bottom: 52px;
+  }
+}
+
+.intro__button {
+  margin-top: auto;
+  align-self: stretch;
+
+  @media (min-width: @tablex-width) {
+    width: 244px;
+    margin-top: 0;
+    align-self: flex-start;
+  }
 }

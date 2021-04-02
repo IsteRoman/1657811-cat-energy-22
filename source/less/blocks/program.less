@@ -1,52 +1,112 @@
 .program {
-  display: grid;
-  grid-template-rows: 1fr, 1fr;
+  margin-bottom: 7px;
+
+  @media (min-width: @tablex-width) {
+    margin-bottom: 25px;
+  }
+
+  @media (min-width: @decktop-width) {
+    margin-bottom: 51px;
+  }
 }
 
 .program__list {
+  display: flex;
+  flex-direction: column;
   .zero-intervals;
   list-style: none;
+
+  @media (min-width: @decktop-width) {
+    flex-direction: row;
+  }
 }
 
 .program__item {
-  background-color: @basic-gray;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
   margin-bottom: 20px;
-  padding: 20px 20px 0 20px;
+  padding: 0 33px 0 20px;
+  background-color: @basic-gray;
+
+  @media (min-width: @tablex-width) {
+    margin-bottom: 30px;
+    padding: 0 279px 0 52px;
+  }
+
+  @media (min-width: @decktop-width) {
+    min-height: 374px;
+    margin-right: 80px;
+    padding: 0 51px 0 52px;
+  }
+}
+
+.program__item:nth-of-type(2n) {
+  margin: 0 0 20px 0;
+
+  @media (min-width: @tablex-width) {
+    margin-bottom: 30px;
+  }
 }
 
 .program__title {
   .zero-intervals;
-  margin: 0 0 29px 71px;
+  margin: 30px 0 29px 51px;
   font-size: 24px;
   font-weight: 400;
   line-height: 1.54;
   text-transform: uppercase;
   color: @basic-black;
+
+  @media (min-width: @tablex-width) {
+    margin: 77px 0 24px 0;
+    font-size: 36px;
+    line-height: 1;
+  }
+
+  @media (min-width: @decktop-width) {
+    margin: 77px 0 73px 162px;
+  }
 }
 
 .program__text {
   .zero-intervals;
-  margin-bottom: 23px;
+  margin-bottom: 38px;
   .arial;
+
+  @media (min-width: @tablex-width) {
+    margin-bottom: 48px;
+  }
+
+  @media (min-width: @decktop-width) {
+    margin-bottom: 23px;
+  }
 }
 
 .program-catalog {
   position: relative;
-  display: block;
-  padding: 19px 0 22px 0;
+  margin-bottom: 22px;
   font-size: 16px;
   line-height: 1;
   text-transform: uppercase;
   color: @basic-black;
-  border-top: 1px solid @special-light-gray-2;
+
+  @media (min-width: @tablex-width) {
+    font-size: 20px;
+    line-height: auto;
+  }
 }
 
 .program-catalog::before {
   content: "";
   position: absolute;
-  top: 25px;
-  left: 100px;
-  width: 18px;
+  top: -15px;
+  width: 240px;
   height: 1px;
-  background-color: @basic-black;
+  background-color: @special-light-gray-2;
+
+  @media (min-width: @tablex-width) {
+    content: none;
+  }
 }
