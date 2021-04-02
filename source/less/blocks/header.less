@@ -3,6 +3,15 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+
+  @media (min-width: @tablex-width) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @tablex-width) {
+    background-color: blue;
+  }
 }
 
 .header__logo {
@@ -18,6 +27,10 @@
   width: 320px;
   height: 1px;
   background-color: @special-light-gray;
+
+  @media (min-width: @tablex-width) {
+    content: none;
+  }
 }
 
 .header__menu-button--open,
@@ -33,6 +46,10 @@
   border-top: 1px solid @basic-black;
   border-bottom: 1px solid @basic-black;
   cursor: pointer;
+
+  @media (min-width: @tablex-width) {
+    display: none;
+  }
 }
 
 .header__menu-button--open::before {
