@@ -72,8 +72,13 @@
 
 .form__textarea {
   width: 100%;
+  height: 150px;
   padding: 9px 5px 5px 15px;
   resize: none;
+
+  @media (min-width: @tablex-width) {
+    height: 174px;
+  }
 }
 
 .form__checkbox {
@@ -82,6 +87,7 @@
 
 .form__label-checkbox {
   position: relative;
+  margin-right: 0;
   padding-left: 44px;
 }
 
@@ -117,18 +123,34 @@
 
 .form__submit {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
 .form__submit-button {
   width: 100%;
+
+  @media (min-width: @tablex-width) {
+    width: 282px;
+  }
+
+  @media (min-width: @decktop-width) {
+    width: 538px;
+  }
 }
 
 .form__requaired-info {
   margin: 21px auto 0 auto;
   line-height: 1.14;
   color: @basic-black;
-  text-align: center;
   .arial;
+
+  @media (min-width: @tablex-width) {
+    align-self: center;
+    margin: 0 auto 0 auto;
+  }
+
+  @media (min-width: @decktop-width) {
+    width: 538px;
+  }
 }

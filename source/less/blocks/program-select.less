@@ -1,10 +1,34 @@
+.program-select {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 .program-select__title {
-  margin-bottom: 37px;
+  margin: 27px 0 37px 0;
+
+  @media (min-width: @tablex-width) {
+    margin: 64px 0 54px 0;
+  }
+
+  @media (min-width: @decktop-width) {
+    margin: 73px 0 56px 0;
+  }
 }
 
 .program-select__text-position {
+  flex-wrap: wrap;
+  width: 226px;
   .zero-intervals;
   margin-bottom: 39px;
   line-height: 1.28;
   text-transform: uppercase;
+  color: @basic-black;
+
+  @media (min-width: @tablex-width) {
+    width: 323px;
+    margin-bottom: 66px;
+    font-size: 20px;
+    line-height: 1.5;
+  }
 }

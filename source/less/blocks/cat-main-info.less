@@ -1,14 +1,22 @@
 .cat-main-info {
+  width: auto;
   .zero-intervals;
   border: none;
+
+  @media (min-width: @decktop-width) {
+    width: 569px;
+  }
 }
 
 .cat-main-info__list {
   .zero-intervals;
-  margin-bottom: 24px;
   list-style: none;
 }
 
 .cat-main-info__item:not(:last-of-type) {
   margin-bottom: 13px;
+
+  @media (min-width: @tablex-width) {
+    margin-bottom: 20px;
+  }
 }

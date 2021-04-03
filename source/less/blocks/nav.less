@@ -56,10 +56,16 @@
     font-size: 20px;
     font-weight: 400;
     line-height: auto;
+  }
+}
+
+.nav__link--decktop-only {
+  @media (min-width: @decktop-width) {
     color: @basic-white;
   }
 }
 
+.nav__item--active-main-only::before,
 .nav__item--active::before {
   @media (min-width: @tablex-width) {
     content: "";
@@ -70,7 +76,9 @@
     height: 2px;
     background-color: @basic-green;
   }
+}
 
+.nav__item--active-main-only::before {
   @media (min-width: @decktop-width) {
     background-color: @basic-white;
   }

@@ -1,23 +1,36 @@
 .cat-program-set {
   position: relative;
   .zero-intervals;
-  margin: 28px 0;
+  padding: 22px 0 19px 0;
   border: none;
+
+  @media (min-width: @tablex-width) {
+    padding: 25px 5px 25px 28px;
+    border: 1px solid @special-light-gray-4;
+  }
+
+  @media (min-width: @decktop-width) {
+    width: 568px;
+  }
 }
 
 .cat-program-set::before,
 .cat-program-set::after {
   content: "";
   position: absolute;
-  top: -28px;
+  top: -7px;
   left: -20px;
   width: 320px;
   height: 1px;
   background-color: @special-light-gray-2;
+
+  @media (min-width: @tablex-width) {
+    content: none;
+  }
 }
 
 .cat-program-set::after {
-  top: 126px;
+  top: 150px;
 }
 
 .cat-program-set__list {
@@ -27,4 +40,8 @@
 
 .cat-program-set__item:not(:last-of-type) {
   margin-bottom: 25px;
+
+  @media (min-width: @tablex-width) {
+    margin-bottom: 23px;
+  }
 }

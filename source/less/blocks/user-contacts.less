@@ -1,8 +1,40 @@
 .user-contacts {
+  margin: 35px auto 23px auto;
+
+  @media (min-width: @tablex-width) {
+    margin: 76px auto 65px auto;
+  }
+
+  @media (min-width: @decktop-width) {
+    margin: 76px auto 69px auto;
+  }
+}
+
+.user-contacts__list {
+  display: flex;
+  flex-direction: column;
   .zero-intervals;
-  margin-top: 35px;
+
+  @media (min-width: @decktop-width) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.user-contacts__item {
+  @media (min-width: @decktop-width) {
+    width: 569px;
+  }
 }
 
 .user-contacts__item:not(:last-of-type) {
   margin-bottom: 14px;
+
+  @media (min-width: @tablex-width) {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: @decktop-width) {
+    margin-bottom: 0;
+  }
 }
