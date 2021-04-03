@@ -1,16 +1,35 @@
 .goods__list {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: stretch;
   flex-wrap: wrap;
   .zero-intervals;
   list-style: none;
+
+  @media (min-width: @tablex-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
 }
 
 .goods__item {
   position: relative;
   width: 100%;
-  margin-top: 19px;
-  margin-bottom: 11px;
+  margin: 0 0 19px 0;
+
+  @media (min-width: @tablex-width) {
+    width: 324px;
+    margin: 0 0 59px 0;
+    padding: 34px 37px 41px 37px;
+    background-image: @background-grey-good-item;
+  }
+
+  @media (min-width: @decktop-width) {
+    width: 245px;
+    margin: 0 0 63px 0;
+    padding: 29px 39px 40px 38px;
+  }
 }
 
 .goods__item::after {
@@ -21,24 +40,32 @@
   width: 100%;
   height: 1px;
   background-color: @special-grey;
+
+  @media (min-width: @tablex-width) {
+    content: none;
+  }
 }
 
 .goods__add {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.gooda__add-plus {
-  margin: 25px 0 23px 0;
+  background: none;
 }
 
 .goods__add-title {
-  margin: 0 0 8px 0;
+  margin: 23px 0 8px 0;
   font-size: 16px;
   line-height: 1.25;
   text-transform: uppercase;
+  text-align: center;
   color: @special-grey-4;
+
+  @media (min-width: @tablex-width) {
+    margin: 49px 0 23px 0;
+    font-size: 20px;
+    line-height: 1.2;
+  }
 }
 
 .goods__add-info {
@@ -46,8 +73,15 @@
   margin-bottom: 21px;
   font-size: 12px;
   line-height: 1.33;
+  text-align: center;
   color: @special-grey-3;
   .arial;
+
+  @media (min-width: @tablex-width) {
+    margin-bottom: 87px;
+    font-size: 16px;
+    line-height: 1.125;
+  }
 }
 
 .goods__button {
@@ -55,4 +89,8 @@
   margin-bottom: 25px;
   color: @special-grey-3;
   background-color: @basic-gray;
+
+  @media (min-width: @tablex-width) {
+    margin-bottom: 0;
+  }
 }
