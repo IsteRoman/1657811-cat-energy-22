@@ -4,6 +4,12 @@
     "img title"
     "img info"
     "button button";
+
+  @media (min-width: @tablex-width) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .good___img {
@@ -18,13 +24,37 @@
   font-size: 16px;
   line-height: 1.25;
   text-transform: uppercase;
+  text-align: center;
   color: @special-grey-4;
+
+  @media (min-width: @tablex-width) {
+    max-width: 154px;
+    margin: 34px 0 21px 0;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  @media (min-width: @decktop-width) {
+    margin: 46px 0 21px 0;
+    line-height: 1.05;
+  }
 }
 
 .good__info {
   grid-area: info;
   width: 100%;
   margin-bottom: 22px;
+
+  @media (min-width: @tablex-width) {
+    border-collapse: collapse;
+  }
+}
+
+.good__info-row {
+  @media (min-width: @tablex-width) {
+    height: 25px;
+    border-bottom: 1px solid @special-grey-1;
+  }
 }
 
 .good__info-element-name,
@@ -33,6 +63,11 @@
   line-height: 1.33;
   color: @special-grey-3;
   .arial;
+
+  @media (min-width: @tablex-width) {
+    font-size: 16px;
+    line-height: 1;
+  }
 }
 
 .good__info-element-name {
@@ -45,4 +80,8 @@
 
 .good__button {
   grid-area: button;
+
+  @media (min-width: @tablex-width) {
+    align-self: stretch;
+  }
 }

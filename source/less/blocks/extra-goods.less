@@ -3,9 +3,20 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: stretch;
+
+  @media (min-width: @decktop-width) {
+    flex-direction: row;
+    justify-content: stretch;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+  }
 }
 
 .extra-goods__list {
   .zero-intervals;
   list-style: none;
+
+  @media (min-width: @decktop-width) {
+    width: 896px;
+  }
 }
