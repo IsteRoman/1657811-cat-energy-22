@@ -1,4 +1,5 @@
-.wrapper {
+.wrapper,
+.wrapper-form {
   width: 100%;
   min-width: @mobile-width;
   margin: 0 auto;
@@ -12,5 +13,12 @@
   @media (min-width: @decktop-width) {
     max-width: @decktop-width;
     padding: 0 110px;
+  }
+}
+
+.wrapper-form {
+  @media (min-width: @tablex-width) {
+    min-width: @tablex-width;
+    padding: 0 67px 0 70px;
   }
 }
