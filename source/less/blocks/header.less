@@ -8,10 +8,6 @@
     flex-direction: row;
     justify-content: space-between;
   }
-
-  @media (min-width: @tablex-width) {
-    background-color: blue;
-  }
 }
 
 .header__logo {
@@ -24,7 +20,7 @@
   position: absolute;
   top: 35px;
   left: -20px;
-  width: 320px;
+  width: 100% + 40px;
   height: 1px;
   background-color: @special-light-gray;
 
@@ -36,8 +32,8 @@
 .header__menu-button--open,
 .header__menu-button--close {
   position: absolute;
-  top: -12px;
-  left: 283px;
+  bottom: 190px;
+  right: 0;
   width: 24px;
   height: 16px;
   margin: 25px 20px 25px 0;
