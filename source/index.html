@@ -37,11 +37,11 @@
           <h2 class="title intro__title">Функциональное питание&nbsp;для&nbsp;котов</h2>
           <span class="intro__text">Занялся собой? займись котом!</span>
           <picture class="intro__product">
+            <source media="(min-width: 768px)" srcset="../img/index/index-can-tablet.png 1x, ../img/index/index-can-tablet@2x.png 2x">
+
+            <source media="(min-width: 1440px)" srcset="../img/index/index-can-desktop.png 1x, ../img/index/index-can-desktop@2x.png 2x">
+
             <img src="../img/index/index-can-mobile.png" srcset="../img/index/index-can-mobile@2x.png" alt="Cat energy продукт">
-
-            <source media="(min-width: @tablex-width)" srcset="../img/index-can-tablet.png 1x, ../img/index-can-tablet@2x.png 2x">
-
-            <source media="(min-width: @decktop-width)" srcset="../img/index-can-desktop.png 1x, ../img/index-can-desktop@2x.png 2x">
           </picture>
           <a class="button intro__button" href="form.html">Подобрать программу</a>
           <div class="intro__background"></div>
@@ -121,7 +121,13 @@
           <span class="contacts__text">Приглашаем к сотрудничеству дилеров!</span>
           <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
         </div>
-        <img src="../img/map-and-marker-mobile.jpg">
+        <picture class="contacts__map-block">
+          <source media="(min-width: 768px)" srcset="../img/map-and-marker-tablex.jpg 1x, ../img/map-and-marker-tablex.jpg 2x">
+
+          <source media="(min-width: 1440px)" srcset="../img/map-and-marker-desctop.jpg 1x, ../img/map-and-marker-desctop.jpg 2x">
+
+          <img class="contacts__map" src="../img/map-and-marker-mobile.jpg" srcset="../img/map-and-marker-mobile@2x.jpg" alt="Cat energy продукт">
+        </picture>
       </section>
     </main>
     <footer class="footer">

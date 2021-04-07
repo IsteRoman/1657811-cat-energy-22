@@ -20,22 +20,21 @@
 .nav__item {
   position: relative;
   display: inline-flex;
-  height: 66px;
   justify-content: center;
   align-items: center;
-}
-
-.nav__item::before {
-  content: "";
-  position: absolute;
-  top: 70px;
-  left: -20px;
-  width: 100% + 40px;
-  height: 1px;
-  background-color: @special-light-gray;
+  padding: 22px 0 24px 0;
+  border-top: 1px solid @special-light-gray;
 
   @media (min-width: @tablex-width) {
-    content: none;
+    border-top: none;
+  }
+}
+
+.nav__item:last-of-type {
+  border-bottom: 1px solid @special-light-gray;
+
+  @media (min-width: @tablex-width) {
+    border-bottom: none;
   }
 }
 
