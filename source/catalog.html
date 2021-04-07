@@ -176,7 +176,7 @@
         </ul>
       </section>
       <section class="extra">
-        <h2 class="extra__title">Дополнительные товары</h2>
+        <h2 class="title-with-line extra__title">Дополнительные товары</h2>
         <div class="wrapper extra-goods">
           <ul class="extra-goods__list">
             <li class="extra-goods__item extra-item">
@@ -223,7 +223,13 @@
           <span class="contacts__text">Приглашаем к сотрудничеству дилеров!</span>
           <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
         </div>
-        <img class="contacts__map" src="" alt="Карта с адресом ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+        <picture class="contacts__map-block">
+          <source media="(min-width: 768px)" srcset="../img/map-and-marker-tablex.jpg 1x, ../img/map-and-marker-tablex.jpg 2x">
+
+          <source media="(min-width: 1440px)" srcset="../img/map-and-marker-desctop.jpg 1x, ../img/map-and-marker-desctop.jpg 2x">
+
+          <img class="contacts__map" src="../img/map-and-marker-mobile.jpg" srcset="../img/map-and-marker-mobile@2x.jpg" alt="Карта с адресом ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+        </picture>
       </section>
     </main>
     <footer class="footer">

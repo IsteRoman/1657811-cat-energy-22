@@ -1,9 +1,10 @@
 .extra-item {
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: stretch;
   padding: 13px 0 18px 0;
+  border-top: 1px solid @special-grey-1;
+  border-bottom: 1px solid @special-grey-1;
 
   @media (min-width: @tablex-width) {
     flex-direction: row;
@@ -25,20 +26,6 @@
 
 .extra-item:not(:last-of-type) {
   border-bottom: none;
-}
-
-.extra-item::after {
-  content: "";
-  position: absolute;
-  top: 136px;
-  left: -20px;
-  width: 100% + 40px;
-  height: 1px;
-  background-color: @special-grey;
-
-  @media (min-width: @tablex-width) {
-    content: none;
-  }
 }
 
 .extra-item__title {
