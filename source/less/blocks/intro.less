@@ -60,21 +60,27 @@
   position: absolute;
   top: 175px;
   left: 20px;
-  width: 280px;
-  height: 270px;
 
   @media (min-width: @tablet-width) {
     top: 270px;
     left: 70px;
     z-index: -1;
-    width: 709px;
-    height: 609px;
   }
 
   @media (min-width: @desktop-width) {
     top: 0;
     left: 500px;
     z-index: 0;
+  }
+}
+
+.intro__product-image {
+  @media (min-width: @tablet-width) {
+    width: 709px;
+    height: 609px;
+  }
+
+  @media (min-width: @desktop-width) {
     width: 552px;
     height: 499px;
   }
