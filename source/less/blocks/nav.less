@@ -13,13 +13,13 @@
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
-    width: 440px;
+    max-width: 440px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 478px;
+    max-width: 478px;
   }
 }
 
@@ -32,6 +32,7 @@
   border-top: 1px solid @special-light-gray;
 
   @media (min-width: @tablet-width) {
+    margin-right: 32px;
     border-top: none;
   }
 }
@@ -40,6 +41,7 @@
   border-bottom: 1px solid @special-light-gray;
 
   @media (min-width: @tablet-width) {
+    margin-right: 0;
     border-bottom: none;
   }
 }

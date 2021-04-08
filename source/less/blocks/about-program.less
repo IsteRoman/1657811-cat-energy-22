@@ -26,6 +26,7 @@
   justify-content: flex-start;
   .zero-intervals;
   list-style: none;
+  counter-reset: number;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
@@ -44,35 +45,11 @@
   @media (min-width: @tablet-width) {
     max-width: 250px;
     margin: 0 0 37px 0;
-    padding: 151px 29px 57px 0;
+    padding: 151px 5px 57px 0;
   }
 
   @media (min-width: @desktop-width) {
     margin: 0;
-  }
-}
-
-.about-program__item:first-of-type {
-  @media (min-width: @tablet-width) {
-    background: url("../img/index/background-number-1.png") right no-repeat;
-  }
-}
-
-.about-program__item:nth-of-type(2n) {
-  @media (min-width: @tablet-width) {
-    background: url("../img/index/background-number-2.png") right no-repeat;
-  }
-}
-
-.about-program__item:nth-of-type(3n) {
-  @media (min-width: @tablet-width) {
-    background: url("../img/index/background-number-3.png") right no-repeat;
-  }
-}
-
-.about-program__item:last-of-type {
-  @media (min-width: @tablet-width) {
-    background: url("../img/index/background-number-4.png") right no-repeat;
   }
 }
 
@@ -93,5 +70,19 @@
 
   @media (min-width: @desktop-width) {
     margin: 0;
+  }
+}
+
+.about-program__item::after {
+  @media (min-width: @tablet-width) {
+    counter-increment: number;
+    content: counter(number);
+    position: absolute;
+    top: 0;
+    left: 113px;
+    z-index: -1;
+    font-size: 280px;
+    line-height: 1;
+    color: @basic-gray;
   }
 }
