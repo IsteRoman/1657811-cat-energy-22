@@ -1,24 +1,21 @@
 .extra-item {
   display: grid;
-  grid-template-areas:
-  "title ."
-  "characteristics characteristics"
-  "button button";
+  grid-template-areas: "title ."
+    "characteristics characteristics"
+    "button button";
   padding: 13px 0 18px 0;
   border-top: 1px solid @special-grey-1;
   border-bottom: 1px solid @special-grey-1;
 
   @media (min-width: @tablet-width) {
-    grid-template-areas:
-    "title characteristics"
-    "button button";
+    grid-template-areas: "title characteristics"
+      "button button";
     padding: 26px 38px 28px 38px;
     border: 1px solid @special-grey-1;
   }
 
   @media (min-width: @desktop-width) {
-    grid-template-areas:
-    "title characteristics button";
+    grid-template-areas: "title characteristics button";
     padding: 15px 0 17px 0;
     border: none;
     border-top: 1px solid @special-grey-1;
