@@ -1,0 +1,135 @@
+.slider {
+  height: 285px;
+
+  @media (min-width: @tablet-width) {
+    height: 620px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 596px;
+  }
+}
+
+.slider__img-block {
+  position: relative;
+}
+
+.slider__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.slider__img--before {
+  width: 311px;
+  height: 232px;
+  z-index: 1;
+  clip-path: inset(0);
+
+  @media (min-width: @tablet-width) {
+    width: 677px;
+    height: 520px;
+    clip-path: inset(0 50% 0 0);
+  }
+
+  @media (min-width: @desktop-width) {
+    left: -48px;
+    clip-path: inset(0 45% 0 0);
+  }
+}
+
+.slider__img--after {
+  left: 22px;
+  z-index: 0;
+  clip-path: inset(100%);
+
+  @media (min-width: @tablet-width) {
+    left: 94px;
+    width: 545px;
+    height: 520px;
+    clip-path: inset(0 0 0 45%);
+  }
+
+  @media (min-width: @desktop-width) {
+    left: -5px;
+    clip-path: inset(0 0 0 50%);
+  }
+}
+
+.slider__control {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 255px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 549px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 556px;
+  }
+}
+
+.slider__button {
+  background: none;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.25;
+  text-transform: uppercase;
+  border: none;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 2px;
+    font-size: 20px;
+    line-height: auto;
+    border-bottom: 1px dotted @basic-black-0-24;
+  }
+}
+
+.slider__scale {
+  align-self: center;
+  width: 84px;
+  height: 14px;
+  margin: 0 12px;
+  padding: 3px 6px;
+  background-color: @basic-white;
+  border: 1px solid @special-grey-1;
+  border-radius: 6px;
+
+  @media (min-width: @tablet-width) {
+    width: 428px;
+    height: 6px;
+    margin: 0 24px;
+    padding: 0;
+    background-color: @special-light-gray-5;
+    border: none;
+  }
+}
+
+.slider__bar {
+  width: 35px;
+  height: 6px;
+  background-color: @basic-green;
+  border-radius: 6px;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.slider__toggle {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    right: 50%;
+    bottom: 0;
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    background-color: @basic-green;
+    border-radius: 50%;
+    box-shadow: 0 0 0 13px @basic-white inset;
+  }
+}
