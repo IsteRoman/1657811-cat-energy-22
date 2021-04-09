@@ -57,7 +57,6 @@
 }
 
 .slider__control {
-  position: relative;
   display: flex;
   justify-content: center;
   margin-top: 255px;
@@ -88,6 +87,7 @@
 }
 
 .slider__scale {
+  position: relative;
   align-self: center;
   width: 84px;
   height: 14px;
@@ -123,13 +123,14 @@
 
   @media (min-width: @tablet-width) {
     position: absolute;
-    right: 50%;
-    bottom: 0;
+    top: -15px;
+    left: 200px;
     display: inline-block;
     width: 34px;
     height: 34px;
     background-color: @basic-green;
     border-radius: 50%;
     box-shadow: 0 0 0 13px @basic-white inset;
+    cursor: pointer;
   }
 }
