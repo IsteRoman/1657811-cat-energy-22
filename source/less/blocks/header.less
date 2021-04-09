@@ -4,13 +4,9 @@
   flex-direction: column;
   justify-content: flex-start;
 
-  @media (min-width: @tablex-width) {
+  @media (min-width: @tablet-width) {
     flex-direction: row;
     justify-content: space-between;
-  }
-
-  @media (min-width: @tablex-width) {
-    background-color: blue;
   }
 }
 
@@ -23,12 +19,12 @@
   content: "";
   position: absolute;
   top: 35px;
-  left: -20px;
-  width: 320px;
+  left: 0;
+  width: auto;
   height: 1px;
   background-color: @special-light-gray;
 
-  @media (min-width: @tablex-width) {
+  @media (min-width: @tablet-width) {
     content: none;
   }
 }
@@ -36,8 +32,8 @@
 .header__menu-button--open,
 .header__menu-button--close {
   position: absolute;
-  top: -12px;
-  left: 283px;
+  bottom: 190px;
+  right: 0;
   width: 24px;
   height: 16px;
   margin: 25px 20px 25px 0;
@@ -47,7 +43,7 @@
   border-bottom: 1px solid @basic-black;
   cursor: pointer;
 
-  @media (min-width: @tablex-width) {
+  @media (min-width: @tablet-width) {
     display: none;
   }
 }

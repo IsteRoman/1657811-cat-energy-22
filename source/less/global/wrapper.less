@@ -1,16 +1,29 @@
-.wrapper {
+.wrapper,
+.wrapper-form {
   width: 100%;
-  max-width: @mobile-width;
+  min-width: @mobile-width;
   margin: 0 auto;
   padding: 0 20px;
 
-  @media (min-width: @tablex-width) {
-    max-width: @tablex-width;
+  @media (min-width: @tablet-width) {
+    min-width: @tablet-width;
     padding: 0 30px;
   }
 
-  @media (min-width: @decktop-width) {
-    max-width: @decktop-width;
+  @media (min-width: @desktop-width) {
+    max-width: @desktop-width;
+    padding: 0 110px;
+  }
+}
+
+.wrapper-form {
+  @media (min-width: @tablet-width) {
+    min-width: @tablet-width;
+    padding: 0 67px 0 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: @desktop-width;
     padding: 0 110px;
   }
 }

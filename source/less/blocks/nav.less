@@ -1,3 +1,9 @@
+.nav {
+  @media (max-width: @max-mobile-width) {
+    margin: 0 -20px 0 -20px;
+  }
+}
+
 .nav__list {
   display: flex;
   flex-direction: column;
@@ -5,37 +11,38 @@
   .zero-intervals;
   list-style: none;
 
-  @media (min-width: @tablex-width) {
+  @media (min-width: @tablet-width) {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
-    width: 440px;
+    max-width: 440px;
   }
 
-  @media (min-width: @decktop-width) {
-    width: 478px;
+  @media (min-width: @desktop-width) {
+    max-width: 478px;
   }
 }
 
 .nav__item {
   position: relative;
   display: inline-flex;
-  height: 66px;
   justify-content: center;
   align-items: center;
+  padding: 22px 0 24px 0;
+  border-top: 1px solid @special-light-gray;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 32px;
+    border-top: none;
+  }
 }
 
-.nav__item::before {
-  content: "";
-  position: absolute;
-  top: 65px;
-  left: -20px;
-  width: 320px;
-  height: 1px;
-  background-color: @special-light-gray;
+.nav__item:last-of-type {
+  border-bottom: 1px solid @special-light-gray;
 
-  @media (min-width: @tablex-width) {
-    content: none;
+  @media (min-width: @tablet-width) {
+    margin-right: 0;
+    border-bottom: none;
   }
 }
 
@@ -46,28 +53,28 @@
   text-transform: uppercase;
   color: @basic-black;
 
-  @media (min-width: @tablex-width) {
+  @media (min-width: @tablet-width) {
     font-size: 18px;
     font-weight: 400;
     line-height: 1.33;
   }
 
-  @media (min-width: @decktop-width) {
+  @media (min-width: @desktop-width) {
     font-size: 20px;
     font-weight: 400;
     line-height: auto;
   }
 }
 
-.nav__link--decktop-only {
-  @media (min-width: @decktop-width) {
+.nav__link--desktop-only {
+  @media (min-width: @desktop-width) {
     color: @basic-white;
   }
 }
 
 .nav__item--active-main-only::before,
 .nav__item--active::before {
-  @media (min-width: @tablex-width) {
+  @media (min-width: @tablet-width) {
     content: "";
     position: absolute;
     top: 56px;
@@ -79,7 +86,7 @@
 }
 
 .nav__item--active-main-only::before {
-  @media (min-width: @decktop-width) {
+  @media (min-width: @desktop-width) {
     background-color: @basic-white;
   }
 }
