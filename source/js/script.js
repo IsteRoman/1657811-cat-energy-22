@@ -31,8 +31,6 @@ const sliderInit = function() {
     const barBorderLeft = barClientRect.x;
     const sliderWidth = barClientRect.width;
 
-
-
     document.onmousemove = function(evt) {
       let x = evt.clientX - barBorderLeft;
       if (x >= 0 && x <= sliderWidth) {
@@ -46,7 +44,6 @@ const sliderInit = function() {
           let changesafter = 'inset( 0 0 0 ' + (chengesreverse + '%') + ')';
           document.getElementsByClassName('slider__img--before')[0].style.clipPath = changesbefore;
           document.getElementsByClassName('slider__img--after')[0].style.clipPath = changesafter;
-
         } );
       }
     }
