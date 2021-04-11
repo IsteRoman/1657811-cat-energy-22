@@ -44,7 +44,7 @@ const sliderInit = function() {
         }
     }
 
-    document.addEventListener('mousemove', listenerMove);
+    document.onmousemove = listenerMove;
 
     toggle.onmouseup = function() {
       document.removeEventListener('mousemove', listenerMove);
