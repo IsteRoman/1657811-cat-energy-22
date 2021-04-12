@@ -1,8 +1,10 @@
+const max_mobile = 767;
+
 const mobileMenuNav = function() {
   const navButton = document.querySelector('.header__menu-button');
   const navMenu = document.querySelector('.header__nav');
 
-  if (window.matchMedia("(max-width: 767px)").matches) {
+  if (window.matchMedia( '(max-width:' + max_mobile + 'px)').matches) {
     navMenu.classList.remove('nav--nojs');
     navButton.addEventListener('click', function(evt) {
       navButton.classList.toggle('header__menu-button--close');
