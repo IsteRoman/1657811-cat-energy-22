@@ -2,6 +2,7 @@
   display: grid;
   grid-template-rows: content, content;
   margin-bottom: 18px;
+  overflow: hidden;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 10px;
@@ -76,6 +77,30 @@
   @media (min-width: @desktop-width) {
     margin: 0;
   }
+}
+
+.about-program__item:first-of-type::before {
+  background-image: url("../img/index/icon-leaf.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.about-program__item:nth-of-type(2)::before {
+  background-image: url("../img/index/icon-tub.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.about-program__item:nth-of-type(3)::before {
+  background-image: url("../img/index/icon-eat.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.about-program__item:nth-of-type(4)::before {
+  background-image: url("../img/index/icon-alarm.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .about-program__item::after {
