@@ -6,33 +6,48 @@ const sliderInit = function() {
   }
 
   const toggle = slider.querySelector('.slider__toggle');
-  const bar = slider.querySelector('.slider__scale');
+  const scale = slider.querySelector('.slider__scale');
+  const bar = slider.querySelector('.slider__bar');
   const beforeButton = slider.querySelector('.before');
   const afterButton = slider.querySelector('.after');
   const sliderImage = slider.querySelectorAll('.slider__img');
 
-  const ButtonBefore = function(evt) {
+  if (window.matchMedia("(max-width: 767px)").matches) {
+    beforeButton.addEventListener('click', function(evt) {
+      sliderImage[1].style.clipPath = "inset(100%)";
+      sliderImage[0].style.clipPath = "inset(0%)";
+      bar.style.width = 0 + '%';
+    });
+
+
+    afterButton.addEventListener('click', function(evt) {
+      sliderImage[0].style.clipPath = "inset(100%)";
+      sliderImage[1].style.clipPath = "inset(0%)";
+      bar.style.width = 100 + '%';
+    });
+  }
+
+  beforeButton.addEventListener('click', function(evt) {
     sliderImage[1].style.clipPath = "inset(100%)";
     sliderImage[0].style.clipPath = "inset(0%)";
     toggle.style.left = 0 + '%';
-  }
-  const ButtonAfter = function(evt) {
+  });
+
+
+  afterButton.addEventListener('click', function(evt) {
     sliderImage[0].style.clipPath = "inset(100%)";
     sliderImage[1].style.clipPath = "inset(0%)";
     toggle.style.left = 95 + '%';
-  }
+  });
 
-  beforeButton.addEventListener('click', ButtonBefore);
-  afterButton.addEventListener('click', ButtonAfter);
-
-  toggle.onmousedown = function(event) {
-    const barClientRect = bar.getBoundingClientRect();
-    const barBorderLeft = barClientRect.x;
-    const sliderWidth = barClientRect.width;
+  toggle.addEventListener('mousedown', function(event) {
+    const scaleClientRect = scale.getBoundingClientRect();
+    const scaleBorderLeft = scaleClientRect.x;
+    const sliderWidth = scaleClientRect.width;
     let shiftX = event.clientX - toggle.getBoundingClientRect().left;
 
     let listenerMove = function(evt) {
-      let x = evt.clientX - barBorderLeft;
+      let x = evt.clientX - scaleBorderLeft;
       if (x >= 0 && x <= sliderWidth) {
         toggle.style.left = (x - shiftX) + 'px';
         let chenges = x / (sliderWidth / 100);
@@ -42,21 +57,14 @@ const sliderInit = function() {
         sliderImage[0].style.clipPath = changesbefore;
         sliderImage[1].style.clipPath = changesafter;
         }
-    }
-
-    document.onmousemove = listenerMove;
-
-    toggle.onmouseup = function() {
-      document.removeEventListener('mousemove', listenerMove);
     };
 
-    function reboot() {
-      document.onmousemove = null;
-      toggle.onmousemove = null;
-    }
-    toggle.onmouseup = reboot;
-    document.onmouseup = reboot;
-  }
+    document.addEventListener('mousemove', listenerMove);
+
+    toggle.addEventListener('mouseup', function() {
+      document.removeEventListener('mousemove', listenerMove);
+    });
+  });
 }
 
 sliderInit();
