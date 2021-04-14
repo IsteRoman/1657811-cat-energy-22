@@ -83,7 +83,7 @@ const sliderInit = function() {
   });
 }
 
-const Validation = function() {
+const validation = function() {
 
   const form = document.querySelector('.form');
   if(!form) {
@@ -92,7 +92,7 @@ const Validation = function() {
 
   const phoneLength = 11;
   const maliRegEx = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
-  const nameRegEx = /[^А-Я,а-я,a-z,A-Z,ё,Ё,' ',-]/;
+  const nameRegEx = /[А-Я,а-я,a-z,A-Z,ё,Ё,' ',-]/;
 
   const submitButton = document.querySelector('.form__submit-button');
   const inputName = document.querySelector('.form__input[name="cat-name"]');
@@ -103,7 +103,7 @@ const Validation = function() {
   const formInput = form.querySelectorAll('.form__input');
 
 
-  inputName.addEventListener('inpur', function() {
+  inputName.addEventListener('input', function() {
     if (!nameRegEx.test(inputName.value)) {
       inputName.classList.add('form__input-error');
     } else {
@@ -144,12 +144,10 @@ const Validation = function() {
   });
 
   submitButton.addEventListener('click', function(evt) {
-    formInput.forEach((el) => {
-      if (formInput.classList.contains('form__input-error')) {
-        evt.preventDefault();
-        alert('Проверьте корректность заполненных полей');
-      }
-    });
+    if (inputName.classList.contains('form__input-error') || inputWeight.classList.contains('form__input-error') || inputAge.classList.contains('form__input-error') || inputEmail.classList.contains('form__input-error') || inputTel.classList.contains('form__input-error') ) {
+      evt.preventDefault();
+      alert("Проверьте правильность заполнения полей");
+    }
   });
 }
 
@@ -157,4 +155,4 @@ mobileMenuNav();
 
 sliderInit();
 
-Validation();
+validation();
