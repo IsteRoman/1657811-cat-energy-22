@@ -92,7 +92,8 @@ const validation = function() {
 
   const phoneLength = 11;
   const maliRegEx = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
-  const nameRegEx = /[А-Я,а-я,a-z,A-Z,ё,Ё,' ',-]/;
+  const nameRegEx = /[^А-Я,а-я,a-z,A-Z,ё,Ё,' ',-]/;
+  const maxNumberlength = 3;
 
   const submitButton = document.querySelector('.form__submit-button');
   const inputName = document.querySelector('.form__input[name="cat-name"]');
@@ -104,7 +105,8 @@ const validation = function() {
 
 
   inputName.addEventListener('input', function() {
-    if (!nameRegEx.test(inputName.value)) {
+    inputName.value = inputName.value.replace(nameRegEx, '');
+    if (nameRegEx.test(inputName.value)) {
       inputName.classList.add('form__input-error');
     } else {
       inputName.classList.remove('form__input-error');
@@ -112,7 +114,7 @@ const validation = function() {
   })
 
   inputWeight.addEventListener('input', function() {
-    if (inputWeight.value <= 0) {
+    if (inputWeight.value <= 0 || inputWeight.value.length > maxNumberlength) {
       inputWeight.classList.add('form__input-error');
     } else {
       inputWeight.classList.remove('form__input-error');
@@ -120,7 +122,7 @@ const validation = function() {
   });
 
   inputAge.addEventListener('input', function() {
-    if (inputAge.value <= 0) {
+    if (inputAge.value <= 0 || inputAge.value.length > maxNumberlength) {
       inputAge.classList.add('form__input-error');
     } else {
       inputAge.classList.remove('form__input-error');
