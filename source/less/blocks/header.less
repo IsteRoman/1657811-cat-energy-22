@@ -11,8 +11,25 @@
 }
 
 .header__logo {
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
   position: relative;
   margin: 11px 0 17px 0;
+  transition: @default-transition;
+
+  @media (max-width: @max-mobile-width) {
+    width: 190px;
+  }
+}
+
+.header__logo:focus,
+.header__logo:hover {
+  opacity: 0.8;
+}
+
+.header__logo:active {
+  opacity: 0.6;
 }
 
 .header__logo::before {
@@ -29,11 +46,74 @@
   }
 }
 
+.header__logo-ico {
+  margin-right: 56px;
+
+  @media (min-width: @tablet-width) {
+    width: 174px;
+    height: 51px;
+    margin-right: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    width: 202px;
+    height: 59px;
+  }
+}
+
+.header__logo-ico--mobile {
+  width: 33px;
+  height: 37px;
+  margin-right: 55px;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.header__logo-ico--mobile-text {
+  width: 101px;
+  height: 18px;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.header__logo-ico--tablet {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    width: 174px;
+    height: 51px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.header__logo-ico--desktop {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    width: 202px;
+    height: 59px;
+  }
+}
+
 .header__menu-button--open,
 .header__menu-button--close {
   position: absolute;
-  top: -13px;
-  left: 90%;
+  top: -6px;
+  left: 87%;
   width: 24px;
   height: 16px;
   margin: 25px 20px 25px 0;
