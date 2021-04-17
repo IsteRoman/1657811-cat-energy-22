@@ -15,6 +15,43 @@
   flex-wrap: nowrap;
 }
 
+.form__input-ico-email,
+.form__input-ico-phone {
+  position: absolute;
+  right: 10px;
+  bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    right: 19px;
+  }
+}
+
+.form__input-ico-email {
+  fill: none;
+  stroke: @special-grey-6;
+}
+
+.form__input-ico-phone {
+  bottom: 18px;
+  fill: @special-grey-6;
+}
+
+.form__input:focus + .form__input-ico-email {
+  stroke: @basic-green;
+}
+
+.form__input:focus + .form__input-ico-phone {
+  fill: @basic-green;
+}
+
+.form__input--error + .form__input-ico-email {
+  stroke: @status-errer;
+}
+
+.form__input--error + .form__input-ico-phone {
+  fill: @status-errer;
+}
+
 .form__label,
 .form__label-radio,
 .form__label-checkbox {
@@ -33,17 +70,19 @@
   padding: 0 5px 0 15px;
   border: 1px solid @special-light-gray-4;
   appearance: none;
-}
-
-.form__input:focus {
-  border: 1px solid @special-grey-3;
+  outline: 0;
+  transition: @default-transition;
 }
 
 .form__input:hover {
   border: 1px solid @special-grey-1;
 }
 
-.form__input-error {
+.form__input:focus {
+  border: 1px solid @special-grey-3;
+}
+
+.form__input--error {
   border: 1px solid @status-errer;
 }
 

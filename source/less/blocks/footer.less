@@ -35,6 +35,15 @@
   }
 }
 
+.footer__logo-ico:focus,
+.footer__logo-ico:hover {
+  opacity: 0.8;
+}
+
+.footer__logo-ico:active {
+  opacity: 0.6;
+}
+
 .footer__social {
   padding: 23px 0 19px 0;
 
@@ -44,6 +53,8 @@
 }
 
 .footer__developer {
+  display: inline-flex;
+  align-items: center;
   align-self: stretch;
   padding-top: 22px;
   border-top: 1px solid @special-light-gray-2;
@@ -55,5 +66,24 @@
   @media (min-width: @tablet-width) {
     padding: 0;
     border-top: none;
+  }
+}
+
+.footer__developer:focus,
+.footer__developer:hover {
+  color: @basic-green;
+}
+
+.footer__developer:active {
+  color: @basic-green;
+  opacity: 0.3;
+}
+
+.footer__developer-icon {
+  margin-left: auto;
+  fill: currentColor;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 22px;
   }
 }
