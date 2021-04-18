@@ -13,14 +13,13 @@
   <body class="body">
     <header class="header wrapper">
       <a class="header__logo">
-        <svg class="header__logo-ico" width="33" height="37">
-          <use class="header__logo-ico--mobile" href="img/icon-sprite/logos.svg#logo-mobile"></use>
-          <use class="header__logo-ico--tablet" href="img/icon-sprite/logos.svg#logo-tablet"></use>
-          <use class="header__logo-ico--desktop" href="img/icon-sprite/logos.svg#logo-desktop"></use>
-        </svg>
-        <svg class="header__logo-ico--mobile-text" width="101" height="18">
-          <use class="header__logo-ico--mobile" href="img/icon-sprite/logos.svg#logo-footer"></use>
-        </svg>
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/logo/logo-desktop.svg">
+
+          <source media="(min-width: 768px)" srcset="img/logo/logo-tablet.svg">
+
+          <img class="header__logo-ico" src="img/logo/logo-mobile.svg" width="190" height="37" alt="CatEnergyLogo">
+        </picture>
       </a>
       <button class="header__menu-button header__menu-button--open" type="button" aria-label="Открыть меню"></button>
       <nav class="header__nav nav nav--close nav--nojs">
@@ -157,10 +156,8 @@
     </main>
     <footer class="footer">
       <div class="wrapper footer__block">
-        <a class="footer__logo" href="#">
-          <svg class="footer__logo-ico" width="128" height="24">
-            <use href="img/icon-sprite/logos.svg#logo-footer"></use>
-          </svg>
+        <a class="footer__logo">
+          <img src="img/logo/logo-footer.svg" width="128" height="24" alt="CatEnergyLogo">
         </a>
         <ul class="footer__social social">
           <li class="social__item">

@@ -23,6 +23,18 @@
   }
 }
 
+.header__logo-ico {
+  @media (min-width: @tablet-width) {
+    width: 174px;
+    height: 51px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 201px;
+    height: 59px;
+  }
+}
+
 .header__logo:focus,
 .header__logo:hover {
   opacity: 0.8;
@@ -43,69 +55,6 @@
 
   @media (min-width: @tablet-width) {
     content: none;
-  }
-}
-
-.header__logo-ico {
-  margin-right: 56px;
-
-  @media (min-width: @tablet-width) {
-    width: 174px;
-    height: 51px;
-    margin-right: 0;
-  }
-
-  @media (min-width: @desktop-width) {
-    display: block;
-    width: 202px;
-    height: 59px;
-  }
-}
-
-.header__logo-ico--mobile {
-  width: 33px;
-  height: 37px;
-  margin-right: 55px;
-
-  @media (min-width: @tablet-width) {
-    display: none;
-  }
-}
-
-.header__logo-ico--mobile-text {
-  width: 101px;
-  height: 18px;
-
-  @media (min-width: @tablet-width) {
-    display: none;
-  }
-}
-
-.header__logo-ico--tablet {
-  display: none;
-
-  @media (min-width: @tablet-width) {
-    display: block;
-    width: 174px;
-    height: 51px;
-  }
-
-  @media (min-width: @desktop-width) {
-    display: none;
-  }
-}
-
-.header__logo-ico--desktop {
-  display: none;
-
-  @media (min-width: @tablet-width) {
-    display: none;
-  }
-
-  @media (min-width: @desktop-width) {
-    display: block;
-    width: 202px;
-    height: 59px;
   }
 }
 
