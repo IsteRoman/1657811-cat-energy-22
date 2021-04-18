@@ -181,6 +181,7 @@
   line-height: 1;
   text-transform: uppercase;
   color: @basic-black;
+  transition: @default-transition;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 53px;
@@ -204,4 +205,28 @@
   @media (min-width: @tablet-width) {
     content: none;
   }
+}
+
+.program-catalog::after {
+  content: url("../img/index/icon-arrow.svg");
+  position: absolute;
+  top: 0;
+  left: 100px;
+  transition: @default-transition;
+
+  @media (min-width: @tablet-width) {
+    top: -3px;
+    left: 120px;
+  }
+}
+
+.program-catalog:focus::after,
+.program-catalog:hover::after,
+.program-catalog:active::after {
+  content: url("../img/index/icon-arrow-focus.svg");
+}
+
+.program-catalog:active,
+.program-catalog:active::after {
+  opacity: 0.3;
 }

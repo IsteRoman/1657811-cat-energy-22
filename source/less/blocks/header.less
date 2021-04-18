@@ -11,8 +11,37 @@
 }
 
 .header__logo {
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
   position: relative;
   margin: 11px 0 17px 0;
+  transition: @default-transition;
+
+  @media (max-width: @max-mobile-width) {
+    width: 190px;
+  }
+}
+
+.header__logo-ico {
+  @media (min-width: @tablet-width) {
+    width: 174px;
+    height: 51px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 201px;
+    height: 59px;
+  }
+}
+
+.header__logo:focus,
+.header__logo:hover {
+  opacity: 0.8;
+}
+
+.header__logo:active {
+  opacity: 0.6;
 }
 
 .header__logo::before {
@@ -32,8 +61,8 @@
 .header__menu-button--open,
 .header__menu-button--close {
   position: absolute;
-  top: -13px;
-  left: 90%;
+  top: -6px;
+  left: 87%;
   width: 24px;
   height: 16px;
   margin: 25px 20px 25px 0;

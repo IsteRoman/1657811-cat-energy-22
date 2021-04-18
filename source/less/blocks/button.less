@@ -10,4 +10,14 @@
   border: none;
   cursor: pointer;
   outline: 0;
+  transition: @default-transition;
+}
+
+.button:focus,
+.button:hover {
+  background-color: @basic-green-2;
+}
+
+.button:active {
+  color: @basic-white-0-30;
 }
