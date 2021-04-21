@@ -9,6 +9,7 @@ const rename = require("gulp-rename");
 const htmlmin = require("gulp-htmlmin");
 const terser = require("gulp-terser");
 const imagemin = require("gulp-imagemin");
+const fileinclude  = require("gulp-file-include");
 const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const del = require("del");
@@ -99,6 +100,19 @@ const sprite = () => {
 
 exports.sprite = sprite;
 
+//Include
+
+const Include = () => {
+  return gulp.src(["source/*.html"])
+  .pipe(fileinclude({
+    prefix: '@@',
+    basepath: '@root'
+  }))
+  .pipe(gulp.dest("build"));
+}
+
+exports.Include = Include;
+
 //Copy
 
 const copy = (done) => {
@@ -169,7 +183,9 @@ const build = gulp.series(
     sprite,
     createWebp
   ),
-);
+  gulp.series(
+    Include
+));
 
 exports.build = build;
 
@@ -187,6 +203,7 @@ exports.default = gulp.series(
     createWebp
   ),
   gulp.series(
+    Include,
     server,
     watcher
   ));

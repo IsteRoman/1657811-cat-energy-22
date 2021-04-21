@@ -11,6 +11,9 @@
     <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body class="body">
+    <div class="visually-hidden">
+      @@include("build/img/sprite.svg");
+    </div>
     <header class="header wrapper">
       <a class="header__logo">
         <picture>
@@ -162,7 +165,7 @@
           <li class="social__item">
             <a class="social__link" href="#" title="В контакте">
               <svg class="social__ico-vk" width="23" height="16">
-                <use href="img/sprite.svg#icon-vkontakte"></use>
+                <use href="#icon-vkontakte"></use>
               </svg>
             </a>
           </li>
