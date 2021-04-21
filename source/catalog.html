@@ -11,6 +11,9 @@
     <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body class="body">
+    <div class="visually-hidden">
+      @@include("build/img/sprite.svg")
+    </div>
     <header class="header wrapper">
       <a class="header__logo" href="index.html">
         <picture>
@@ -232,7 +235,7 @@
           </li>
           <li class="goods__item goods__add">
             <svg class="gooda__add-plus" width="30" height="30">
-              <use href="img/sprite.svg#icon-plus"></use>
+              <use href="#icon-plus"></use>
             </svg>
             <p class="goods__add-title">Показать еще 100500 товаров</p>
             <p class="goods__add-info">На самом деле вкусов гораздо больше!</p>
@@ -311,28 +314,28 @@
           <li class="social__item">
             <a class="social__link" href="#" title="В контакте">
               <svg class="social__ico-vk" width="23" height="16">
-                <use href="img/sprite.svg#icon-vkontakte"></use>
+                <use href="#icon-vkontakte"></use>
               </svg>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link" href="#" title="Инстаграм">
               <svg class="social__ico-instagram" width="16" height="16">
-                <use href="img/sprite.svg#icon-instagram"></use>
+                <use href="#icon-instagram"></use>
               </svg>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link" href="#" title="Фэйсбук">
               <svg class="social__ico-facebook" width="22" height="22">
-                <use href="img/sprite.svg#icon-facebook"></use>
+                <use href="#icon-facebook"></use>
               </svg>
             </a>
           </li>
         </ul>
         <a class="footer__developer"href="https://htmlacademy.ru/intensive/adaptive">HTML Academy
           <svg class="footer__developer-icon" width="27" height="34">
-            <use href="img/sprite.svg#logo-html"></use>
+            <use href="#logo-html"></use>
           </svg>
         </a>
       </div>
