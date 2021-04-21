@@ -1,8 +1,20 @@
-.intro {
+.intro__block {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-bottom: 22px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 82px;
+  }
 }
 
-.intro::before {
+.intro__block::before {
   content: "";
   position: absolute;
   top: 0;
@@ -40,22 +52,6 @@
     @media (min-resolution: 2dppx) {
       background-image: url("../img/index/index-background-desktop@2x.png");
     }
-  }
-}
-
-.intro__block {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  margin-bottom: 22px;
-
-  @media (min-width: @tablet-width) {
-    margin-bottom: 0;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-bottom: 82px;
   }
 }
 
