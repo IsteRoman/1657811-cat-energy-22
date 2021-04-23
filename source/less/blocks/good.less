@@ -16,25 +16,33 @@
 .good__img {
   margin: auto;
   grid-area: img;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
 }
 
 .good__image-1 {
+  margin: 8px 3px 0 5px;
+
   @media (min-width: @tablet-width) {
     width: 161px;
     height: 172px;
-    margin-top: 36px;
+    margin-top: 35px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 29px;
+    margin: 29px 0 0 0;
   }
 }
 
 .good__image-2 {
+  margin: 20px 0 0 -1px;
+
   @media (min-width: @tablet-width) {
     width: 168px;
     height: 206px;
-    margin-top: 8px;
+    margin: 8px 0 0 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -45,6 +53,8 @@
 }
 
 .good__image-3 {
+  margin: 30px 0 0 0;
+
   @media (min-width: @tablet-width) {
     width: 163px;
     height: 174px;
@@ -57,6 +67,8 @@
 }
 
 .good__image-4 {
+  margin: 18px 0 0 0;
+
   @media (min-width: @tablet-width) {
     width: 168px;
     height: 200px;
@@ -71,6 +83,8 @@
 }
 
 .good__image-5 {
+  margin: 30px 0 0 0;
+
   @media (min-width: @tablet-width) {
     width: 161px;
     height: 171px;
@@ -83,6 +97,8 @@
 }
 
 .good__image-6 {
+  margin: 20px 0 0 0;
+
   @media (min-width: @tablet-width) {
     width: 168px;
     height: 200px;
@@ -97,6 +113,8 @@
 }
 
 .good__image-7 {
+  margin: 24px 0 0 0;
+
   @media (min-width: @tablet-width) {
     width: 163px;
     height: 174px;
@@ -111,7 +129,7 @@
 .good__title {
   grid-area: title;
   max-width: 76px;
-  margin: 19px 0 18px 0;
+  margin: 19px 0 14px 0;
   font-size: 16px;
   line-height: 1.25;
   text-transform: uppercase;
@@ -126,7 +144,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin: 46px 0 21px 0;
+    margin: 38px 0 21px 0;
     line-height: 1.05;
   }
 }
@@ -134,10 +152,11 @@
 .good__info {
   grid-area: info;
   width: 100%;
-  margin-bottom: 22px;
+  margin-bottom: 20px;
+  border-collapse: collapse;
 
-  @media (min-width: @tablet-width) {
-    border-collapse: collapse;
+  @media (min-width: @desktop-width) {
+    margin-bottom: 50px;
   }
 }
 

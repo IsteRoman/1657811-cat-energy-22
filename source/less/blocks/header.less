@@ -7,6 +7,11 @@
   @media (min-width: @tablet-width) {
     flex-direction: row;
     justify-content: space-between;
+    padding-top: 19px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 50px;
   }
 }
 
@@ -15,10 +20,10 @@
   justify-content: flex-start;
   align-items: center;
   position: relative;
-  margin: 12px 0 14px 0;
   transition: @default-transition;
 
   @media (max-width: @max-mobile-width) {
+    margin: 12px 0 14px 0;
     width: 190px;
   }
 }

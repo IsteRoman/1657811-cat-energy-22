@@ -22,7 +22,7 @@
 .goods__item {
   position: relative;
   width: 100%;
-  margin: 0 0 19px 0;
+  margin: 0 0 24px 0;
   padding: 0 20px;
 
   @media (max-width: @max-mobile-width) {
@@ -32,14 +32,24 @@
   @media (min-width: @tablet-width) {
     width: 324px;
     margin: 0 60px 59px 0;
-    padding: 34px 37px 41px 37px;
+    padding: 0 37px 41px 37px;
     background-image: @background-grey-good-item;
   }
 
   @media (min-width: @desktop-width) {
     width: 245px;
-    margin: 0 80px 63px 0;
-    padding: 29px 39px 40px 38px;
+    margin: 0 80px 33px 0;
+    padding: 29px 39px 42px 38px;
+  }
+}
+
+.goods__item:last-of-type {
+  margin-bottom: 7px;
+}
+
+.goods__item:nth-of-type(7) {
+  @media (min-width: @tablet-width) {
+    margin-bottom: 50px;
   }
 }
 
@@ -47,6 +57,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 23px;
   background: none;
 
   @media (max-width: @max-mobile-width) {
@@ -59,7 +70,7 @@
 }
 
 .goods__add-title {
-  margin: 23px 0 8px 0;
+  margin: 25px 0 8px 0;
   font-size: 16px;
   line-height: 1.25;
   text-transform: uppercase;
@@ -67,9 +78,13 @@
   color: @special-grey-4;
 
   @media (min-width: @tablet-width) {
+    width: 150px;
     margin: 49px 0 23px 0;
     font-size: 20px;
     line-height: 1.2;
+  }
+  @media (min-width: @tablet-width) {
+    margin: 75px 0 23px 0;
   }
 }
 
@@ -83,6 +98,7 @@
   .arial;
 
   @media (min-width: @tablet-width) {
+    width: 200px;
     margin-bottom: 87px;
     font-size: 16px;
     line-height: 1.125;
@@ -92,6 +108,7 @@
 .goods__button {
   align-self: stretch;
   margin-bottom: 25px;
+  font-size: 16px;
   color: @special-grey-3;
   background-color: @basic-gray;
 
