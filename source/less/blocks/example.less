@@ -3,13 +3,13 @@
   background-color: @special-light-gray-3;
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 33px;
+    padding-bottom: 20px;
     background-image: @background-grey-tablet;
     border-top: 1px solid @special-light-gray;
   }
 
   @media (min-width: @desktop-width) {
-    padding-bottom: 75px;
+    padding-bottom: 60px;
     background-image: @background-grey-desktop;
     border-top: none;
   }
@@ -60,6 +60,7 @@
   }
 
   @media (min-width: @desktop-width) {
+    max-width: 440px;
     margin-bottom: 69px;
   }
 }
@@ -164,11 +165,13 @@
   @media (min-width: @tablet-width) {
     flex-direction: column;
     align-items: flex-end;
+    margin-top: -9px;
   }
 
   @media (min-width: @desktop-width) {
     flex-direction: row;
     justify-content: flex-start;
+    margin-top: 0;
   }
 }
 
@@ -181,10 +184,11 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 1;
+    margin: 9px 0 0 0;
   }
 
   @media (min-width: @desktop-width) {
-    margin-right: 63px;
+    margin: 0 63px 0 0;
   }
 }
 

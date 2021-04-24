@@ -1,3 +1,7 @@
+.goods {
+  overflow: hidden;
+}
+
 .goods__list {
   display: flex;
   flex-direction: column;
@@ -69,6 +73,18 @@
   }
 }
 
+.goods__add-plus {
+  @media (min-width: @tablet-width) {
+    width: 60px;
+    height: 60px;
+    margin-top: -30px;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-top: -5px;
+  }
+}
+
 .goods__add-title {
   margin: 25px 0 8px 0;
   font-size: 16px;
@@ -83,8 +99,9 @@
     font-size: 20px;
     line-height: 1.2;
   }
+
   @media (min-width: @tablet-width) {
-    margin: 75px 0 23px 0;
+    margin: 46px 0 23px 0;
   }
 }
 
