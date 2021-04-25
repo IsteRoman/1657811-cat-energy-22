@@ -4,7 +4,7 @@ const mobileMenuNav = function() {
   const navButton = document.querySelector('.header__menu-button');
   const navMenu = document.querySelector('.header__nav');
 
-  if (window.matchMedia( '(max-width:' + max_mobile + 'px)').matches) {
+  if (window.matchMedia('(max-width:' + max_mobile + 'px)').matches) {
     navMenu.classList.remove('nav--nojs');
     navButton.addEventListener('click', function(evt) {
       navButton.classList.toggle('header__menu-button--close');
@@ -17,7 +17,7 @@ const mobileMenuNav = function() {
 const sliderInit = function() {
 
   const slider = document.querySelector('.slider');
-  if(!slider) {
+  if (!slider) {
     return;
   }
 
@@ -28,31 +28,31 @@ const sliderInit = function() {
   const afterButton = slider.querySelector('.after');
   const sliderImage = slider.querySelectorAll('.slider__img');
 
-  if (window.matchMedia("(max-width: 767px)").matches) {
+  if (window.matchMedia('(max-width: 767px)').matches) {
     beforeButton.addEventListener('click', function(evt) {
-      sliderImage[1].style.clipPath = "inset(100%)";
-      sliderImage[0].style.clipPath = "inset(0%)";
+      sliderImage[1].style.clipPath = 'inset(100%)';
+      sliderImage[0].style.clipPath = 'inset(0%)';
       bar.style.width = 0 + '%';
     });
 
 
     afterButton.addEventListener('click', function(evt) {
-      sliderImage[0].style.clipPath = "inset(100%)";
-      sliderImage[1].style.clipPath = "inset(0%)";
+      sliderImage[0].style.clipPath = 'inset(100%)';
+      sliderImage[1].style.clipPath = 'inset(0%)';
       bar.style.width = 100 + '%';
     });
   }
 
   beforeButton.addEventListener('click', function(evt) {
-    sliderImage[1].style.clipPath = "inset(100%)";
-    sliderImage[0].style.clipPath = "inset(0%)";
+    sliderImage[1].style.clipPath = 'inset(100%)';
+    sliderImage[0].style.clipPath = 'inset(0%)';
     toggle.style.left = 0 + '%';
   });
 
 
   afterButton.addEventListener('click', function(evt) {
-    sliderImage[0].style.clipPath = "inset(100%)";
-    sliderImage[1].style.clipPath = "inset(0%)";
+    sliderImage[0].style.clipPath = 'inset(100%)';
+    sliderImage[1].style.clipPath = 'inset(0%)';
     toggle.style.left = 95 + '%';
   });
 
@@ -86,7 +86,7 @@ const sliderInit = function() {
 const validation = function() {
 
   const form = document.querySelector('.form');
-  if(!form) {
+  if (!form) {
     return;
   }
 
@@ -148,7 +148,7 @@ const validation = function() {
   submitButton.addEventListener('click', function(evt) {
     if (inputName.classList.contains('form__input--error') || inputWeight.classList.contains('form__input--error') || inputAge.classList.contains('form__input--error') || inputEmail.classList.contains('form__input--error') || inputTel.classList.contains('form__input--error') ) {
       evt.preventDefault();
-      alert("Проверьте правильность заполнения полей");
+      alert('Проверьте правильность заполнения полей');
     }
   });
 }
