@@ -100,9 +100,7 @@ const validation = function() {
   const inputWeight = document.querySelector('.form__input[name="cat-weight"]');
   const inputAge = document.querySelector('.form__input[name="cat-age"]');
   const inputEmail = document.querySelector('.form__input[type="email"]');
-  const iconEmail = document.querySelector('.form__input-ico-email');
   const inputTel = document.querySelector('.form__input[type="tel"]');
-  const iconTel = document.querySelector('.form__input-ico-phone');
   const formInput = form.querySelectorAll('.form__input');
 
 
@@ -136,7 +134,6 @@ const validation = function() {
       inputEmail.classList.add('form__input--error');
     } else {
       inputEmail.classList.remove('form__input--error');
-      iconEmail.style.stroke = "#68b738";
     }
   });
 
@@ -145,7 +142,6 @@ const validation = function() {
       inputTel.classList.add('form__input--error');
     } else {
       inputTel.classList.remove('form__input--error');
-      iconTel.style.fill = "#68b738";
     }
   });
 
