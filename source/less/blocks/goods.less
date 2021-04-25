@@ -37,13 +37,29 @@
     width: 324px;
     margin: 0 60px 59px 0;
     padding: 0 37px 41px 37px;
-    background-image: @background-grey-good-item;
   }
 
   @media (min-width: @desktop-width) {
     width: 245px;
     margin: 0 80px 33px 0;
     padding: 29px 39px 42px 38px;
+  }
+}
+
+.goods__item::before {
+  @media (min-width: @tablet-width) {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+    height: calc(100% - 80px);
+    background-color: @basic-gray;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: calc(100% - 110px);
   }
 }
 
