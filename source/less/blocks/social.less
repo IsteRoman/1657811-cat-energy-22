@@ -11,22 +11,32 @@
 
   @media (min-width: @tablet-width) {
     width: 160px;
-    margin-left: 50px;
+    margin-left: 52px;
     text-align: unset;
   }
 }
 
 .social__item:not(:nth-of-type(3n)) {
-  margin: 0 34px 5px 0;
+  margin: 0 36px 5px 0;
 
   @media (min-width: @tablet-width) {
-    margin: 0 30px 5px 0;
+    margin: 0 29px 5px 1px;
   }
 }
 
 .social__item:nth-of-type(2) {
+  margin: -1px 34px 0 0;
+
   @media (min-width: @tablet-width) {
     margin-right: 20px;
+  }
+}
+
+.social__item:nth-of-type(3) {
+  margin: -1px 0 0 0;
+
+  @media (min-width: @tablet-width) {
+    margin-top: -2px;
   }
 }
 

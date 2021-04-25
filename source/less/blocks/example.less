@@ -39,7 +39,7 @@
 }
 
 .example__title {
-  margin: 27px 0 36px 0;
+  margin: 27px 0 35px 0;
 
   @media (min-width: @tablet-width) {
     margin: 43px 0 63px 0;
@@ -52,11 +52,13 @@
 
 .example__text {
   .zero-intervals;
-  margin-bottom: 29px;
+  margin-bottom: 23px;
   .arial;
+  line-height: 1.29;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 54px;
+    margin-bottom: 52px;
+    line-height: 1.5;
   }
 
   @media (min-width: @desktop-width) {
@@ -144,6 +146,8 @@
   }
 
   @media (min-width: @desktop-width) {
+    top: 62px;
+    left: 24px;
     background-color: @special-light-gray-3;
   }
 }
