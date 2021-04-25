@@ -1,23 +1,20 @@
 .footer {
-  padding: 39px 0 15px 0;
-
-  @media (min-width: @tablet-width) {
-    padding: 55px 0 50px 0;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding: 57px 0 58px 0;
-  }
-}
-
-.footer__block {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  padding-top: 39px;
+  padding-bottom: 15px;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
+    padding-top: 55px;
+    padding-bottom: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 57px;
+    padding-bottom: 58px;
   }
 }
 
