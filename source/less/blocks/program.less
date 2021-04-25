@@ -43,7 +43,8 @@
   }
 }
 
-.program__item::before {
+.program__item--slim::before,
+.program__item--muscle::before {
   content: "";
   position: absolute;
   top: 24px;
@@ -72,34 +73,10 @@
   }
 }
 
-.program__slim::after {
-  content: "";
-  position: absolute;
-  top: 20px;
-  left: 29px;
-  width: 36px;
-  height: 50px;
-  background: url("../img/index/ico-slim.svg") no-repeat;
-  background-size: cover;
-
-  @media (min-width: @tablet-width) {
-    top: unset;
-    right: 91px;
-    bottom: 27%;
-    left: unset;
-    width: 140px;
-    height: 192px;
-  }
-
-  @media (min-width: @desktop-width) {
-    top: 43px;
-    right: unset;
-    bottom: unset;
-    left: 68px;
-    width: 70px;
-    height: 97px;
-  }
+.program__item--slim::before {
+  background: url("../img/index/ico-slim.svg") center center no-repeat 36px 50px;
 }
+
 
 .program__muscle::after {
   content: "";
