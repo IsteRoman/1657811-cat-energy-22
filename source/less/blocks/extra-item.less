@@ -3,7 +3,7 @@
   grid-template-areas: "title ."
     "characteristics characteristics"
     "button button";
-  padding: 10px 0 18px 0;
+  padding: 11px 0 18px 0;
   border-top: 1px solid @special-grey-1;
   border-bottom: 1px solid @special-grey-1;
 
@@ -31,7 +31,7 @@
   grid-area: title;
   min-width: 200px;
   text-align: start;
-  margin: 0 0 10px 0;
+  margin: 0 0 9px 1px;
 
   @media (min-width: @tablet-width) {
     margin: 0;
@@ -84,6 +84,8 @@
 
 .extra-item__button {
   grid-area: button;
+  font-size: 16px;
+  line-height: 1.25;
 
   @media (min-width: @tablet-width) {
     height: 38px;
