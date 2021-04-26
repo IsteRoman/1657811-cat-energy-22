@@ -30,6 +30,10 @@
   align-items: center;
   border-top: 1px solid @special-light-gray;
 
+  @media (max-width: @max-mobile-width) {
+    width: 100%;
+  }
+
   @media (min-width: @tablet-width) {
     margin-right: 35px;
     border-top: none;
@@ -54,6 +58,11 @@
   color: @basic-black;
   transition: @default-transition;
 
+  @media (max-width: @max-mobile-width) {
+    width: 100%;
+    text-align: center;
+  }
+
   @media (min-width: @tablet-width) {
     font-size: 18px;
     font-weight: 400;
@@ -63,7 +72,7 @@
   @media (min-width: @desktop-width) {
     font-size: 20px;
     font-weight: 400;
-    line-height: auto;
+    line-height: 1;
   }
 }
 
