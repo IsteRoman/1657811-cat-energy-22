@@ -69,7 +69,11 @@
 
 .goods__item:nth-of-type(7) {
   @media (min-width: @tablet-width) {
-    margin-bottom: 50px;
+    margin-bottom: 45px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 53px;
   }
 }
 
@@ -92,30 +96,40 @@
   @media (min-width: @tablet-width) {
     margin: 81px 0 0 0;
   }
+
+  @media (min-width: @desktop-width) {
+    margin: 110px 0 0 0;
+  }
 }
 
 .goods__add::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -2;
-  width: 324px;
-  height: 429px;
-  background-color: transparent;
-  border: 1px solid @basic-gray;
-}
+  @media (min-width: @tablet-width) {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    width: 324px;
+    height: 429px;
+    background-color: transparent;
+    border: 1px solid @basic-gray;
+  }
 
+  @media (min-width: @desktop-width) {
+    width: 245px;
+    height: 430px;
+  }
+}
 
 .goods__add-plus {
   @media (min-width: @tablet-width) {
     width: 60px;
     height: 60px;
-    margin-top: -30px;
+    margin-top: 28px;
   }
 
-  @media (min-width: @tablet-width) {
-    margin-top: -5px;
+  @media (min-width: @desktop-width) {
+    margin-top: 28px;
   }
 }
 
@@ -129,13 +143,13 @@
 
   @media (min-width: @tablet-width) {
     width: 150px;
-    margin: 49px 0 23px 0;
+    margin: 47px 0 23px 0;
     font-size: 20px;
     line-height: 1.2;
   }
 
-  @media (min-width: @tablet-width) {
-    margin: 46px 0 23px 0;
+  @media (min-width: @desktop-width) {
+    margin: 45px 0 23px 0;
   }
 }
 
@@ -153,6 +167,10 @@
     margin-bottom: 87px;
     font-size: 16px;
     line-height: 1.125;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 86px;
   }
 }
 
