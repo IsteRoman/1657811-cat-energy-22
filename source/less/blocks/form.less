@@ -1,5 +1,5 @@
 .form {
-  margin-bottom: 32px;
+  margin-bottom: 31px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 72px;
@@ -18,8 +18,8 @@
 .form__input-ico-email,
 .form__input-ico-phone {
   position: absolute;
-  right: 10px;
-  bottom: 20px;
+  right: 14px;
+  bottom: 19px;
 
   @media (min-width: @tablet-width) {
     right: 19px;
@@ -36,11 +36,11 @@
   fill: @special-grey-6;
 }
 
-.form__input:focus + .form__input-ico-email {
+.form__input:valid + .form__input-ico-email {
   stroke: @basic-green;
 }
 
-.form__input:focus + .form__input-ico-phone {
+.form__input:valid + .form__input-ico-phone {
   fill: @basic-green;
 }
 
@@ -61,6 +61,12 @@
   line-height: 1.125;
   text-transform: uppercase;
   color: @special-grey-4;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 16px;
+    font-size: 20px;
+    line-height: 1;
+  }
 }
 
 .form__input {
@@ -68,10 +74,21 @@
   height: 45px;
   margin-bottom: 5px;
   padding: 0 5px 0 15px;
+  font-size: 16px;
+  line-height: 1.125;
+  text-transform: uppercase;
+  color: @special-grey-3;
   border: 1px solid @special-light-gray-4;
   appearance: none;
   outline: 0;
   transition: @default-transition;
+
+  @media (min-width: @tablet-width) {
+    height: 51px;
+    padding: 0 5px 0 21px;
+    font-size: 20px;
+    line-height: 1;
+  }
 }
 
 .form__input:hover {
@@ -86,12 +103,8 @@
   border: 1px solid @status-errer;
 }
 
-.form__input::placeholder,
-.form__textarea::placeholder {
-  font-size: 16px;
-  line-height: 1.125;
-  text-transform: uppercase;
-  color: @special-grey-3;
+.form__input:focus::placeholder {
+  color: transparent;
 }
 
 .form__radio {
@@ -105,6 +118,10 @@
   overflow: hidden;
   cursor: pointer;
   transition: @default-transition;
+
+  @media (min-width: @tablet-width) {
+    padding: 10px 0 10px 60px;
+  }
 }
 
 .form__label-radio::before {
@@ -116,6 +133,11 @@
   height: 30px;
   border: 1px solid @special-grey-1;
   border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .form__label-radio:focus::before,
@@ -132,6 +154,13 @@
   height: 13.5px;
   background-color: @basic-green;
   border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    top: 12px;
+    left: 11px;
+    width: 18px;
+    height: 18px;
+  }
 }
 
 .form__radio + .form__label-radio::after {
@@ -146,10 +175,17 @@
   width: 100%;
   height: 150px;
   padding: 9px 5px 5px 15px;
+  font-size: 16px;
+  line-height: 1.125;
+  text-transform: uppercase;
+  color: @special-grey-3;
   resize: none;
 
   @media (min-width: @tablet-width) {
     height: 174px;
+    padding: 10px 5px 5px 17px;
+    font-size: 20px;
+    line-height: 1.5;
   }
 }
 
@@ -161,10 +197,18 @@
   position: relative;
   display: block;
   margin-right: 0;
-  padding: 4px 0 4px 44px;
+  padding: 5px 0 6px 45px;
   overflow: hidden;
   cursor: pointer;
   transition: @default-transition;
+
+  @media (min-width: @tablet-width) {
+    padding: 9px 0 10px 58px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 7px 0 12px 58px;
+  }
 }
 
 .form__label-checkbox::before {
@@ -172,21 +216,42 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 26px;
-  height: 26px;
+  width: 30px;
+  height: 29px;
   border: 1px solid @special-grey-1;
+
+  @media (min-width: @tablet-width) {
+    top: 0;
+    width: 40px;
+    height: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 0;
+  }
 }
 
 .form__label-checkbox::after {
   content: "";
   position: absolute;
-  top: 6px;
-  left: 7px;
+  top: 7px;
+  left: 8px;
   width: 14px;
   height: 8px;
   border-left: 1px solid @basic-green;
   border-bottom: 1px solid @basic-green;
   transform: rotate(-45deg);
+
+  @media (min-width: @tablet-width) {
+    top: 8px;
+    left: 11px;
+    width: 17px;
+    height: 12px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 9px;
+  }
 }
 
 .form__checkbox + .form__label-checkbox::after {
@@ -207,7 +272,6 @@
 .form__radio:disabled + .form__label-radio,
 .form__checkbox:disabled + .form__label-checkbox {
   opacity: 0.3;
-  cursor: none;
   outline: 0;
 }
 
@@ -219,28 +283,35 @@
 
 .form__submit-button {
   width: 100%;
+  font-size: 16px;
+  line-height: 1.25;
 
   @media (min-width: @tablet-width) {
     width: 282px;
+    height: 52px;
+    font-size: 20px;
+    line-height: 1;
   }
 
   @media (min-width: @desktop-width) {
-    width: 538px;
+    width: 570px;
   }
 }
 
 .form__requaired-info {
-  margin: 21px auto 0 auto;
+  margin: 22px auto 0 auto;
   line-height: 1.14;
   color: @basic-black;
   .arial;
 
   @media (min-width: @tablet-width) {
     align-self: center;
-    margin: 0 auto 0 auto;
+    margin: -2px auto 0 63px;
+    line-height: 1;
   }
 
   @media (min-width: @desktop-width) {
     width: 538px;
+    margin-left: 80px;
   }
 }

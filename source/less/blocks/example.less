@@ -1,15 +1,15 @@
 .example {
-  padding-bottom: 25px;
+  padding-bottom: 35px;
   background-color: @special-light-gray-3;
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 33px;
+    padding-bottom: 20px;
     background-image: @background-grey-tablet;
     border-top: 1px solid @special-light-gray;
   }
 
   @media (min-width: @desktop-width) {
-    padding-bottom: 75px;
+    padding-bottom: 60px;
     background-image: @background-grey-desktop;
     border-top: none;
   }
@@ -39,7 +39,7 @@
 }
 
 .example__title {
-  margin: 27px 0 33px 0;
+  margin: 27px 0 35px 0;
 
   @media (min-width: @tablet-width) {
     margin: 43px 0 63px 0;
@@ -52,14 +52,17 @@
 
 .example__text {
   .zero-intervals;
-  margin-bottom: 25px;
+  margin-bottom: 23px;
   .arial;
+  line-height: 1.29;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 54px;
+    margin-bottom: 52px;
+    line-height: 1.5;
   }
 
   @media (min-width: @desktop-width) {
+    max-width: 440px;
     margin-bottom: 69px;
   }
 }
@@ -84,7 +87,7 @@
   grid-template-columns: 124px 124px;
   gap: 32px;
   .zero-intervals;
-  margin-bottom: 25px;
+  margin-bottom: 34px;
   list-style: none;
 
   @media (min-width: @tablet-width) {
@@ -122,8 +125,8 @@
 
 .example__statistics-definition {
   position: absolute;
-  top: 45px;
-  left: 18px;
+  top: 48px;
+  left: 16px;
   display: block;
   width: 87px;
   padding: 0 7px;
@@ -143,6 +146,8 @@
   }
 
   @media (min-width: @desktop-width) {
+    top: 62px;
+    left: 24px;
     background-color: @special-light-gray-3;
   }
 }
@@ -164,11 +169,13 @@
   @media (min-width: @tablet-width) {
     flex-direction: column;
     align-items: flex-end;
+    margin-top: -9px;
   }
 
   @media (min-width: @desktop-width) {
     flex-direction: row;
     justify-content: flex-start;
+    margin-top: 0;
   }
 }
 
@@ -181,10 +188,11 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 1;
+    margin: 9px 0 0 0;
   }
 
   @media (min-width: @desktop-width) {
-    margin-right: 63px;
+    margin: 0 63px 0 0;
   }
 }
 

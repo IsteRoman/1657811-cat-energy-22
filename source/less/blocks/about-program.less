@@ -14,7 +14,7 @@
 }
 
 .about-program__title {
-  margin-bottom: 38px;
+  margin-bottom: 43px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 32px;
@@ -37,7 +37,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-right: -70px;
+    margin-right: -80px;
   }
 }
 
@@ -50,19 +50,20 @@
 
   @media (min-width: @tablet-width) {
     max-width: 250px;
-    margin: 0 153px 37px 0;
-    padding: 151px 5px 57px 0;
+    margin: 0 133px 37px 0;
+    padding: 152px 5px 57px 0;
   }
 
   @media (min-width: @desktop-width) {
-    margin: 0 70px 5px 0;
+    margin: 0 75px 5px 0;
+    padding: 153px 5px 57px 0;
   }
 }
 
 .about-program__item::before {
   content: "";
   position: absolute;
-  top: 0;
+  top: -5px;
   left: 0;
   width: 60px;
   height: 60px;
@@ -111,6 +112,7 @@
     top: 0;
     left: 113px;
     z-index: -1;
+    font-family: "Oswald", "Arial", sans-serif;
     font-size: 280px;
     line-height: 1;
     color: @basic-gray;

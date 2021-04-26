@@ -78,13 +78,31 @@
   padding: 0 20px 0 20px;
 
   @media (min-width: @tablet-width) {
-    margin: 64px 0 83px 0;
+    margin: 54px 0 83px 0;
     padding: 0 30px 0 30px;
   }
 
   @media (min-width: @desktop-width) {
     width: @desktop-width;
-    margin: 74px auto 84px auto;
+    margin: 71px auto 56px auto;
     padding: 0 0 0 110px;
+  }
+}
+
+.card-title {
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  color: @special-grey-4;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  @media (min-width: @desktop-width) {
+    line-height: 1.05;
   }
 }
