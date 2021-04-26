@@ -166,11 +166,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
       myPlacemark = new ymaps.Placemark(myMap.getCenter(), {}, {
         iconLayout: 'default#image',
-        iconImageHref: 'img/map-element/map-pin-mobile.png',
-        iconImageSize: [30, 42],
-
-            iconImageOffset: [-5, -38]
-
+        iconImageHref: 'img/map-element/map-pin-desktop.png',
+        iconImageSize: [57, 53],
+        iconImageOffset: [-25, -45]
       });
 
       myMap.controls.remove('geolocationControl');
@@ -179,7 +177,6 @@ document.addEventListener('DOMContentLoaded', function() {
       myMap.controls.remove('typeSelector');
       myMap.controls.remove('fullscreenControl');
       myMap.controls.remove('rulerControl');
-      myMap.behavior.disable(['scrollZoom']);
       myMap.geoObjects.add(myPlacemark);
     });
   }
@@ -190,5 +187,3 @@ mobileMenuNav();
 sliderInit();
 
 validation();
-
-apiMap();
