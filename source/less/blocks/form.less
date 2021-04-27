@@ -56,6 +56,7 @@
 .form__label-radio,
 .form__label-checkbox {
   align-self: center;
+  width: max-content;
   margin-right: 12px;
   font-size: 16px;
   line-height: 1.125;
@@ -73,7 +74,7 @@
   flex-grow: 2;
   height: 45px;
   margin-bottom: 5px;
-  padding: 0 5px 0 15px;
+  padding: 0 0 0 11px;
   font-size: 16px;
   line-height: 1.125;
   text-transform: uppercase;
@@ -91,19 +92,23 @@
   }
 }
 
-.form__input:hover {
+.form__input:hover,
+.form__textarea:hover {
   border: 1px solid @special-grey-1;
 }
 
-.form__input:focus {
+.form__input:focus,
+.form__textarea:focus {
   border: 1px solid @special-grey-3;
+  outline: 0;
 }
 
 .form__input--error {
   border: 1px solid @status-errer;
 }
 
-.form__input:focus::placeholder {
+.form__input:focus::placeholder,
+.form__textarea:focus::placeholder {
   color: transparent;
 }
 
@@ -179,6 +184,8 @@
   line-height: 1.125;
   text-transform: uppercase;
   color: @special-grey-3;
+  border: 1px solid @special-light-gray-4;
+  transition: @default-transition;
   resize: none;
 
   @media (min-width: @tablet-width) {
@@ -203,11 +210,11 @@
   transition: @default-transition;
 
   @media (min-width: @tablet-width) {
-    padding: 9px 0 10px 58px;
+    padding: 10px 0 10px 58px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 7px 0 12px 58px;
+    padding: 8px 0 12px 58px;
   }
 }
 
@@ -300,7 +307,7 @@
 
 .form__requaired-info {
   margin: 22px auto 0 auto;
-  line-height: 1.14;
+  line-height: 1.1428571428;
   color: @basic-black;
   .arial;
 

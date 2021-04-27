@@ -98,7 +98,6 @@ const validation = function() {
   const submitButton = document.querySelector('.form__submit-button');
   const inputName = document.querySelector('.form__input[name="cat-name"]');
   const inputWeight = document.querySelector('.form__input[name="cat-weight"]');
-  const inputAge = document.querySelector('.form__input[name="cat-age"]');
   const inputEmail = document.querySelector('.form__input[type="email"]');
   const inputTel = document.querySelector('.form__input[type="tel"]');
   const formInput = form.querySelectorAll('.form__input');
@@ -121,14 +120,6 @@ const validation = function() {
     }
   });
 
-  inputAge.addEventListener('input', function() {
-    if (inputAge.value <= 0 || inputAge.value.length > maxNumberlength) {
-      inputAge.classList.add('form__input--error');
-    } else {
-      inputAge.classList.remove('form__input--error');
-    }
-  });
-
   inputEmail.addEventListener('input', function() {
     if (!maliRegEx.test(inputEmail.value)) {
       inputEmail.classList.add('form__input--error');
@@ -146,7 +137,7 @@ const validation = function() {
   });
 
   submitButton.addEventListener('click', function(evt) {
-    if (inputName.classList.contains('form__input--error') || inputWeight.classList.contains('form__input--error') || inputAge.classList.contains('form__input--error') || inputEmail.classList.contains('form__input--error') || inputTel.classList.contains('form__input--error') ) {
+    if (inputName.classList.contains('form__input--error') || inputWeight.classList.contains('form__input--error') || inputEmail.classList.contains('form__input--error') || inputTel.classList.contains('form__input--error') ) {
       evt.preventDefault();
       alert('Проверьте правильность заполнения полей');
     }

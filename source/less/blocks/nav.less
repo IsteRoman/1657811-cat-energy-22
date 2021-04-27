@@ -30,10 +30,6 @@
   align-items: center;
   border-top: 1px solid @special-light-gray;
 
-  @media (max-width: @max-mobile-width) {
-    width: 100%;
-  }
-
   @media (min-width: @tablet-width) {
     margin-right: 35px;
     border-top: none;
@@ -50,10 +46,10 @@
 }
 
 .nav__link {
-  padding: 23px 0 22px 0;
+  padding: 22px 0 23px 0;
   font-size: 20px;
   font-weight: 500;
-  line-height: 1;
+  line-height: 20px;
   text-transform: uppercase;
   color: @basic-black;
   transition: @default-transition;
@@ -66,13 +62,13 @@
   @media (min-width: @tablet-width) {
     font-size: 18px;
     font-weight: 400;
-    line-height: 1.33;
+    line-height: 24px;
   }
 
   @media (min-width: @desktop-width) {
     font-size: 20px;
     font-weight: 400;
-    line-height: 1;
+    line-height: 20px;
   }
 }
 
